@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Browse Ingredients</title>
+    <link rel="stylesheet" href="easypantry.css">
+    <style>
+        #ingredients-container {
+            height: 50%;
+            width: 99%;
+            border-color: black;
+            border-width: 3px;
+            border-style: solid;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            margin:auto;
+        }
+        .tile {
+            width: 30%;
+            margin: 5px;
+            padding: 5px;
+            border: 2px solid black;
+        }
+        #search {
+            width: 80%;
+            padding: 5px;
+            border: 2px solid black;
+        }
+        .filter-tabs {
+            margin: 10px 0 10px;
+        }
+        .filter-tab {
+            display: inline-block;
+            padding: 10px;
+            margin-right: 5px;
+            border: 2px solid black;
+            cursor: pointer;
+        }
+        .filter-tab.active {
+            background-color: #ccc;
+        }
+    </style>
+    <!-- Bring in jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="header">
+        <!-- Insert header here -->
+    </div>
+    <div class="maincontent">
+        <h1>Browse Ingredients</h1>
+        <!--Search input-->
+        <input type="text" id="search" placeholder="Search ingredients...">
+        <!--Filters by Category-->
+        <div class="filter-tabs">
+            <div class="filter-tab" data-category="all">All</div>
+            <div class="filter-tab" data-category="Produce">Produce</div>
+            <div class="filter-tab" data-category="Dairy">Dairy</div>
+            <div class="filter-tab" data-category="Grains">Grains</div>
+            <!-- Add more categories as needed -->
+        </div>
+        <!--Ingredients Gallery-->
+        <div id="ingredients-container">
+            <!-- jQuery will auto-populate gallery -->
+        </div>
+    </div>
+    <!-- jQuery to auto-populate gallery from JSON file -->
+    <script>
+        $(document).ready(function() {
+            // Get JSON File
+            $.getJSON('sampledata.json', function(data) {
+                var ingredients = data;
+                var container = $('#ingredients-container');
+
+                // Function to display ingredients
+                function displayIngredients(ingredients) {
+                    container.empty();
+                    $.each(ingredients, function(index, ingredient) {
+                        var tile = $('<div class="tile"></div>');
+                        var img = $('<img>').attr('src', ingredient.image).attr('alt', ingredient.name);
+                        var name = $('<h2></h2>').text(ingredient.name);
+                        var description = $('<p></p>').text(ingredient.description);
+                        var button = $('<button>View Ingredient</button>').attr('src', 'view.html?ingredient=' + encodeURIComponent(ingredient.name));
+                        tile.append(img, name, description, button);
+                        container.append(tile);
+                    });
+                }
+
+                // Display all ingredients initially
+                displayIngredients(ingredients);
+
+                // Search functionality
+                $('#search').on('input', function() {
+                    var searchTerm = $(this).val().toLowerCase();
+                    var filteredIngredients = ingredients.filter(function(ingredient) {
+                        return ingredient.name.toLowerCase().includes(searchTerm);
+                    });
+                    displayIngredients(filteredIngredients);
+                });
+
+                // Filter by category functionality
+                $('.filter-tab').on('click', function() {
+                    var category = $(this).data('category');
+                    $('.filter-tab').removeClass('active');
+                    $(this).addClass('active');
+
+                    var filteredIngredients = ingredients.filter(function(ingredient) {
+                        return category === 'all' || ingredient.category === category;
+                    });
+                    displayIngredients(filteredIngredients);
+                });
+
+                // Set default active filter
+                $('.filter-tab[data-category="all"]').addClass('active');
+            }).fail(function() {
+                console.error('Error fetching ingredients.');
+            });
+        });
+    </script>
+</body>
+</html>
