@@ -3,16 +3,159 @@
   <head>
     <title>EasyPantry - Substitution Calculator</title>
     <link rel="stylesheet" href="easypantry.css" />
-    <link rel="stylesheet" href="easypantry.css" />
+    <link rel="stylesheet" href="calculator-styles.css" />
     <script src="header.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         addHeader("calculator");
       });
     </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
   <body>
     <!-- Loads header from header.js -->
     <div id="header"></div>
+    <div id="container">
+      <h1 id="page-title">Substitution Calculator</h1>
+      <div id="calculator-container">
+        <div id="ingredient-input">
+          <p>Ingredient to substitute:</p>
+          <select id="ingredients-dropdown">
+            <!-- jQuery will auto-populate options -->
+          </select>
+        </div>
+        <div id="calculator-section">
+          <div id="calculator-input">
+            <input type="number" placeholder="Quantity" id="quantity-input" />
+            <select name="Units" id="units-dropdown">
+              <option value="oz">oz</option>
+              <option value="g">g</option>
+              <option value="cups">cups</option>
+              <option value="tbsp">tbsp</option>
+              <option value="tsp">tsp</option>
+              <option value="l">L</option>
+              <option value="ml">mL</option>
+            </select>
+          </div>
+          <div id="substitution-options">
+            <!-- jQuery will auto-populate substitutions -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const ingredientId = urlParams.get("ingredientId");
+        let quantity = $("#quantity-input").val();
+        let unit = $("#units-dropdown").val();
+
+        $.getJSON("sampledata.json", function (data) {
+          var ingredients = data;
+          var dropdown = $("#ingredients-dropdown");
+
+          function getIngredientById(id) {
+            return ingredients.find(function (ingredient) {
+              return ingredient.id == id;
+            });
+          }
+
+          // Function to display ingredients
+          function addInputIngredientOptions(ingredients) {
+            dropdown.empty();
+            $.each(ingredients, function (index, ingredient) {
+              var option = $("<option></option>")
+                .attr("value", ingredient.id)
+                .text(ingredient.name);
+              dropdown.append(option);
+            });
+          }
+
+          // Display all ingredients in select options initially
+          addInputIngredientOptions(ingredients);
+
+          // If ingredientId is provided, set it as selected
+          if (ingredientId) {
+            var selectedIngredient = getIngredientById(ingredientId);
+            if (selectedIngredient) {
+              dropdown.val(selectedIngredient.id);
+            } else {
+              console.error("Ingredient not found.");
+            }
+          }
+
+          // Function to display substitutions
+          function displaySubstitutions(ingredient) {
+            var substitutionsSection = $("#substitution-options");
+            substitutionsSection.empty();
+
+            $.each(ingredient.substitutes, function (index, substitution) {
+              var substitutionIngredient = getIngredientById(substitution.id);
+              if (substitutionIngredient) {
+                var substitutionDiv = $("<div></div>")
+                  .attr("id", substitutionIngredient.id)
+                  .attr("ratio", substitution.ratio)
+                  .addClass("substitution-option");
+
+                var substituteNameLabel = $("<p></p>")
+                  .text(substitutionIngredient.name)
+                  .addClass("substitute-name");
+
+                var calculatedAmount =
+                  $("<div></div>").addClass("calculated-amount");
+
+                var quantityText = $("<p></p>").addClass("calculated-quantity");
+                if (quantity) {
+                  var calculatedValue = (quantity * substitution.ratio).toFixed(
+                    2
+                  );
+                  quantityText.text(calculatedValue);
+                } else {
+                  quantityText.text("-");
+                }
+                calculatedAmount.append(quantityText);
+
+                var unitText = $("<p></p>").addClass("calculated-unit");
+                if (unit) {
+                  unitText.text(unit);
+                } else {
+                  unitText.text("-");
+                }
+                calculatedAmount.append(unitText);
+
+                substitutionDiv.append(substituteNameLabel);
+                substitutionDiv.append(calculatedAmount);
+
+                substitutionsSection.append(substitutionDiv);
+              } else {
+                console.error("Substitution ingredient not found.");
+              }
+            });
+          }
+
+          // If ingredientId is provided, display its substitutions
+          displaySubstitutions(getIngredientById(dropdown.val()));
+
+          // Reload page with new ingredientId when ingredient changes
+          $("#ingredients-dropdown").on("change", function () {
+            window.location.href =
+              "calculator.html?ingredientId=" + $(this).val();
+          });
+
+          $("#quantity-input").on("input", function () {
+            quantity = $(this).val();
+            displaySubstitutions(getIngredientById(dropdown.val()));
+          });
+
+          $("#units-dropdown").on("change", function () {
+            unit = $(this).val();
+            displaySubstitutions(getIngredientById(dropdown.val()));
+          });
+        }).fail(function () {
+          console.error("Error fetching ingredients.");
+        });
+      });
+    </script>
   </body>
 </html>

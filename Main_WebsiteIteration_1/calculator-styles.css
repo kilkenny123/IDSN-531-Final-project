@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+}
+
+#page-title {
+  text-align: center;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  gap: 20px;
+}
+
+#calculator-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 800px;
+  width: 100%;
+}
+
+#ingredient-input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+select,
+input {
+  border: 1px solid #e0e0e0;
+  padding: 10px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+}
+
+select:focus,
+input:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+#substitution-options {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e0e0e0;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.substitution-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+}
+
+.substitution-option:not(:last-child) {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.calculated-amount {
+  display: flex;
+  gap: 5px;
+}
+
+#calculator-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+}
+
+#calculator-input {
+  display: flex;
+}
+
+#quantity-input {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  flex-grow: 1;
+}
+
+#units-dropdown {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
