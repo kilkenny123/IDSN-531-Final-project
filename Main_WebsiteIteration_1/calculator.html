@@ -11,6 +11,7 @@
       });
     </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="calculator-script.js"></script>
   </head>
   <body>
     <!-- Loads header from header.js -->
@@ -19,7 +20,7 @@
       <h1 id="page-title">Substitution Calculator</h1>
       <div id="calculator-container">
         <div id="ingredient-input">
-          <p>Ingredient to substitute:</p>
+          <p><strong>Ingredient to substitute:</strong></p>
           <select id="ingredients-dropdown">
             <!-- jQuery will auto-populate options -->
           </select>
@@ -28,7 +29,7 @@
           <!-- jQuery will auto-populate ingredient image -->
         </div>
         <div id="calculator-section">
-          <p>Calculate Substitution Quantities:</p>
+          <p><strong>Calculate Substitution Quantities</strong>:</p>
           <div id="calculator-input">
             <input type="number" placeholder="Quantity" id="quantity-input" />
             <select name="Units" id="units-dropdown">
@@ -41,162 +42,14 @@
               <option value="mL">mL</option>
             </select>
           </div>
+          <div id="tag-filters">
+            <!-- jQuery will auto-populate tags -->
+          </div>
           <div id="substitution-options">
             <!-- jQuery will auto-populate substitutions -->
           </div>
         </div>
       </div>
     </div>
-
-    <script>
-      $(document).ready(function () {
-        const urlParams = new URLSearchParams(window.location.search);
-        const ingredientId = urlParams.get("ingredientId");
-        let quantity = $("#quantity-input").val();
-        let unit = $("#units-dropdown").val();
-
-        $.getJSON("sampledata.json", function (data) {
-          var ingredients = data;
-          var dropdown = $("#ingredients-dropdown");
-
-          function getIngredientById(id) {
-            return ingredients.find(function (ingredient) {
-              return ingredient.id == id;
-            });
-          }
-
-          // Function to display ingredients
-          function addInputIngredientOptions(ingredients) {
-            dropdown.empty();
-            $.each(ingredients, function (index, ingredient) {
-              var option = $("<option></option>")
-                .attr("value", ingredient.id)
-                .text(ingredient.name);
-              dropdown.append(option);
-            });
-          }
-
-          // Display all ingredients in select options initially
-          addInputIngredientOptions(ingredients);
-
-          // Function to display ingredient image
-          function displayIngredientImage(ingredient) {
-            var imageContainer = $("#ingredient-image-container");
-            imageContainer.empty();
-
-            var img = $("<img>")
-              .attr("src", ingredient.image)
-              .attr("alt", ingredient.name)
-              .addClass("ingredient-image");
-            imageContainer.append(img);
-          }
-
-          // If ingredientId is provided, set it as selected and display its image
-          if (ingredientId) {
-            var selectedIngredient = getIngredientById(ingredientId);
-            if (selectedIngredient) {
-              dropdown.val(selectedIngredient.id);
-              displayIngredientImage(selectedIngredient);
-            } else {
-              console.error("Ingredient not found.");
-            }
-          }
-
-          // Function to display substitutions
-          function displaySubstitutions(ingredient) {
-            var substitutionsSection = $("#substitution-options");
-            substitutionsSection.empty();
-
-            $.each(ingredient.substitutes, function (index, substitution) {
-              var substitutionIngredient = getIngredientById(substitution.id);
-              if (substitutionIngredient) {
-                var substitutionDiv = $("<div></div>").addClass(
-                  "substitution-option"
-                );
-
-                var substituteDetails =
-                  $("<div></div>").addClass("substitute-details");
-
-                var substituteImage = $("<img>")
-                  .attr("src", substitutionIngredient.image)
-                  .attr("alt", substitutionIngredient.name)
-                  .addClass("substitute-image");
-
-                substituteDetails.append(substituteImage);
-
-                var substituteDetailsText = $("<div></div>").addClass(
-                  "substitute-details-text"
-                );
-
-                var substituteNameLabel = $("<p></p>")
-                  .text(substitutionIngredient.name)
-                  .addClass("substitute-name");
-
-                substituteDetailsText.append(substituteNameLabel);
-
-                var substituteDescriptionLabel = $("<p></p>")
-                  .text(substitutionIngredient.description)
-                  .addClass("substitute-description");
-
-                substituteDetailsText.append(substituteDescriptionLabel);
-
-                substituteDetails.append(substituteDetailsText);
-
-                var calculatedAmount =
-                  $("<div></div>").addClass("calculated-amount");
-
-                var quantityText = $("<p></p>").addClass("calculated-quantity");
-                if (quantity) {
-                  var calculatedValue = (quantity * substitution.ratio).toFixed(
-                    2
-                  );
-                  quantityText.text(calculatedValue);
-                } else {
-                  quantityText.text("-");
-                }
-                calculatedAmount.append(quantityText);
-
-                var unitText = $("<p></p>").addClass("calculated-unit");
-                if (unit) {
-                  unitText.text(unit);
-                } else {
-                  unitText.text("-");
-                }
-                calculatedAmount.append(unitText);
-
-                substitutionDiv.append(substituteDetails);
-                substitutionDiv.append(calculatedAmount);
-
-                substitutionsSection.append(substitutionDiv);
-              } else {
-                console.error("Substitution ingredient not found.");
-              }
-            });
-          }
-
-          // If ingredientId is provided, display its substitutions
-          displaySubstitutions(getIngredientById(dropdown.val()));
-
-          // Reload page with new ingredientId when ingredient changes
-          $("#ingredients-dropdown").on("change", function () {
-            window.location.href =
-              "calculator.html?ingredientId=" + $(this).val();
-          });
-
-          // Update substitutions when quantity or unit changes
-          $("#quantity-input").on("input", function () {
-            quantity = $(this).val();
-            displaySubstitutions(getIngredientById(dropdown.val()));
-          });
-
-          $("#units-dropdown").on("change", function () {
-            unit = $(this).val();
-            displaySubstitutions(getIngredientById(dropdown.val()));
-          });
-        }).fail(function () {
-          console.error("Error fetching ingredients.");
-        });
-      });
-    </script>
   </body>
 </html>
