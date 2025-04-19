@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Browse Ingredients</title>
+    <title>EasyPantry - Browse Ingredients</title>
     <link rel="stylesheet" href="easypantry.css">
     <style>
         #ingredients-container {
@@ -43,11 +43,16 @@
     </style>
     <!-- Bring in jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="header.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        addHeader("ingredients");
+      });
+    </script>
 </head>
 <body>
-    <div class="header">
-        <!-- Insert header here -->
-    </div>
+    <!-- Loads header from header.js -->
+    <div id="header"></div>
     <div class="maincontent">
         <h1>Browse Ingredients</h1>
         <!--Search input-->

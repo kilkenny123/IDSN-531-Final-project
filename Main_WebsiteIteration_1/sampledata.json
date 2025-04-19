@@ -1,5 +1,6 @@
 [
     {
+        "id": 1,
         "name": "Ing 1",
         "image": "#",
         "description": "A red, juicy fruit often used in salads and cooking.",
@@ -22,6 +23,7 @@
             ]
     },
     {
+        "id": 2,
         "name": "Ing 2",
         "image": "#",
         "description": "A red, juicy fruit often used in salads and cooking.",
@@ -44,6 +46,7 @@
             ]
     },
     {
+        "id": 3,
         "name": "Ing 3",
         "image": "#",
         "description": "A red, juicy fruit often used in salads and cooking.",
@@ -66,6 +69,7 @@
             ]
     },
     {
+        "id": 4,
         "name": "Ing 4",
         "image": "#",
         "description": "A red, juicy fruit often used in salads and cooking.",
@@ -88,6 +92,7 @@
             ]
     },
     {
+        "id": 5,
         "name": "Ing 5",
         "image": "#",
         "description": "A red, juicy fruit often used in salads and cooking.",
@@ -110,6 +115,7 @@
             ]
     },
     {
+        "id": 6,
         "name": "Ing 6",
         "image": "#",
         "description": "A red, juicy fruit often used in salads and cooking.",
@@ -132,7 +138,8 @@
             ]
     },
         {
-            "name": "Ing 1",
+            "id": 7,
+            "name": "2% Milk",
             "image": "#",
             "description": "A red, juicy fruit often used in salads and cooking.",
             "tag":"Vegan",
@@ -154,6 +161,7 @@
                 ]
         },
         {
+            "id": 8,
             "name": "Ing 2",
             "image": "#",
             "description": "A red, juicy fruit often used in salads and cooking.",
@@ -176,6 +184,7 @@
                 ]
         },
         {
+            "id": 9,
             "name": "Ing 3",
             "image": "#",
             "description": "A red, juicy fruit often used in salads and cooking.",
@@ -198,6 +207,7 @@
                 ]
         },
         {
+            "id": 10,
             "name": "Ing 4",
             "image": "#",
             "description": "A red, juicy fruit often used in salads and cooking.",
@@ -220,6 +230,7 @@
                 ]
         },
         {
+            "id": 11,
             "name": "Ing 5",
             "image": "#",
             "description": "A red, juicy fruit often used in salads and cooking.",
@@ -242,6 +253,7 @@
                 ]
         },
         {
+            "id": 12,
             "name": "Ing 7",
             "image": "#",
             "description": "A red, juicy fruit often used in salads and cooking.",
@@ -264,7 +276,8 @@
                 ]
         },
         {
-            "name": "Grains",
+            "id": 13,
+            "name": "White Rice",
             "image": "#",
             "description": "A red, juicy fruit often used in salads and cooking.",
             "tag":"Vegan",
