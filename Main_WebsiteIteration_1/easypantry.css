@@ -11,6 +11,10 @@ body {
   font-family: sans-serif;
 }
 
+img {
+  max-width: 100%;
+}
+
 .header {
   width: 100%;
   padding: 20px;

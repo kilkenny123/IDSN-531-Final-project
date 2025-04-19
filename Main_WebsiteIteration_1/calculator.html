@@ -24,7 +24,11 @@
             <!-- jQuery will auto-populate options -->
           </select>
         </div>
+        <div id="ingredient-image-container">
+          <!-- jQuery will auto-populate ingredient image -->
+        </div>
         <div id="calculator-section">
+          <p>Calculate Substitution Quantities:</p>
           <div id="calculator-input">
             <input type="number" placeholder="Quantity" id="quantity-input" />
             <select name="Units" id="units-dropdown">
@@ -33,8 +37,8 @@
               <option value="cups">cups</option>
               <option value="tbsp">tbsp</option>
               <option value="tsp">tsp</option>
-              <option value="l">L</option>
-              <option value="ml">mL</option>
+              <option value="L">L</option>
+              <option value="mL">mL</option>
             </select>
           </div>
           <div id="substitution-options">
@@ -75,11 +79,24 @@
           // Display all ingredients in select options initially
           addInputIngredientOptions(ingredients);
 
-          // If ingredientId is provided, set it as selected
+          // Function to display ingredient image
+          function displayIngredientImage(ingredient) {
+            var imageContainer = $("#ingredient-image-container");
+            imageContainer.empty();
+
+            var img = $("<img>")
+              .attr("src", ingredient.image)
+              .attr("alt", ingredient.name)
+              .addClass("ingredient-image");
+            imageContainer.append(img);
+          }
+
+          // If ingredientId is provided, set it as selected and display its image
           if (ingredientId) {
             var selectedIngredient = getIngredientById(ingredientId);
             if (selectedIngredient) {
               dropdown.val(selectedIngredient.id);
+              displayIngredientImage(selectedIngredient);
             } else {
               console.error("Ingredient not found.");
             }
@@ -93,14 +110,37 @@
             $.each(ingredient.substitutes, function (index, substitution) {
               var substitutionIngredient = getIngredientById(substitution.id);
               if (substitutionIngredient) {
-                var substitutionDiv = $("<div></div>")
-                  .attr("id", substitutionIngredient.id)
-                  .attr("ratio", substitution.ratio)
-                  .addClass("substitution-option");
+                var substitutionDiv = $("<div></div>").addClass(
+                  "substitution-option"
+                );
+
+                var substituteDetails =
+                  $("<div></div>").addClass("substitute-details");
+
+                var substituteImage = $("<img>")
+                  .attr("src", substitutionIngredient.image)
+                  .attr("alt", substitutionIngredient.name)
+                  .addClass("substitute-image");
+
+                substituteDetails.append(substituteImage);
+
+                var substituteDetailsText = $("<div></div>").addClass(
+                  "substitute-details-text"
+                );
 
                 var substituteNameLabel = $("<p></p>")
                   .text(substitutionIngredient.name)
                   .addClass("substitute-name");
+
+                substituteDetailsText.append(substituteNameLabel);
+
+                var substituteDescriptionLabel = $("<p></p>")
+                  .text(substitutionIngredient.description)
+                  .addClass("substitute-description");
+
+                substituteDetailsText.append(substituteDescriptionLabel);
+
+                substituteDetails.append(substituteDetailsText);
 
                 var calculatedAmount =
                   $("<div></div>").addClass("calculated-amount");
@@ -124,7 +164,7 @@
                 }
                 calculatedAmount.append(unitText);
 
-                substitutionDiv.append(substituteNameLabel);
+                substitutionDiv.append(substituteDetails);
                 substitutionDiv.append(calculatedAmount);
 
                 substitutionsSection.append(substitutionDiv);
@@ -143,6 +183,7 @@
               "calculator.html?ingredientId=" + $(this).val();
           });
 
+          // Update substitutions when quantity or unit changes
           $("#quantity-input").on("input", function () {
             quantity = $(this).val();
             displaySubstitutions(getIngredientById(dropdown.val()));

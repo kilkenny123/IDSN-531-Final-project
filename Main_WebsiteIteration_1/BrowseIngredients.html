@@ -86,7 +86,7 @@
                         var img = $('<img>').attr('src', ingredient.image).attr('alt', ingredient.name);
                         var name = $('<h2></h2>').text(ingredient.name);
                         var description = $('<p></p>').text(ingredient.description);
-                        var button = $('<button>View Ingredient</button>').attr('src', 'view.html?ingredient=' + encodeURIComponent(ingredient.name));
+                        var button = $('<button>View Ingredient</button>').attr('onclick', `window.location.href='calculator.html?ingredientId=${ingredient.id}'`);
                         tile.append(img, name, description, button);
                         container.append(tile);
                     });

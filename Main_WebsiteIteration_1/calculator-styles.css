@@ -27,6 +27,19 @@
   width: 100%;
 }
 
+#ingredient-image-container {
+  display: flex;
+  width: 100%;
+  max-height: 300px;
+}
+
+.ingredient-image {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+}
+
 #ingredient-input {
   display: flex;
   flex-direction: column;
@@ -67,6 +80,28 @@ input:focus {
 
 .substitution-option:not(:last-child) {
   border-bottom: 1px solid #e0e0e0;
+}
+
+.substitute-details {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.substitute-details-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.substitute-description {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.substitute-image {
+  width: 80px;
+  border-radius: 5px;
 }
 
 .calculated-amount {
