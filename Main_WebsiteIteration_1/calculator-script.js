@@ -277,6 +277,9 @@ $(document).ready(function () {
       selectedCategory = $(this).text().toLowerCase();
 
       var filteredIngredients = ingredients.filter(function (ingredient) {
+        if (selectedCategory === "all") {
+          return true;
+        }
         return ingredient.category.toLowerCase() === selectedCategory;
       });
       addInputIngredientOptions(filteredIngredients);
