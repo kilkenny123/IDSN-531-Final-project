@@ -7,39 +7,169 @@
     <style>
         #ingredients-container {
             height: 50%;
-            width: 99%;
-            border-color: black;
-            border-width: 3px;
-            border-style: solid;
+            width: 100%;
             display: flex;
             flex-wrap: wrap;
-            flex-direction: row;
-            margin:auto;
+            flex-flow: space-between;
         }
         .tile {
-            width: 30%;
-            margin: 5px;
-            padding: 5px;
-            border: 2px solid black;
+            width: 349px;
+            height: 405px;
+            border-radius: 10px;
+            border-width: 2px;
+            border-color:#DAD7CD;
+            border-style: solid;
+            margin:5px;
+            text-align: center;
+            text-overflow: ellipsis;
+        }
+        .view-btn {
+            width: 197px;
+            height: 62px;
+            border-radius: 10px;
+            border-width: 2px;
+            border-color: #749475;
+            background-color: white;;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-align: center;
+            color:#5D7E5E;
         }
         #search {
             width: 80%;
             padding: 5px;
-            border: 2px solid black;
+            border: 2px solid #DAD7CD;
+            border-radius:20px;
+            padding-left:30px;
+            font-size: 15px;
+            color:#A4A298;
+            
         }
         .filter-tabs {
-            margin: 10px 0 10px;
+        display: flex; /* Ensure the tabs are aligned in a row */
+        flex-wrap: wrap; /* Allow wrapping if necessary */
+        margin: 10px 0 10px;
+    }
+
+    .filter-tab {
+        display: flex; /* Use flexbox for alignment */
+        align-items: center; /* Vertically center the text */
+        justify-content: center; /* Horizontally center the text */
+        padding: 10px;
+        margin-right: 5px;
+        cursor: pointer;
+        width: 132px;
+        height: 98px;
+        border-radius: 20px;
+        background-color: #5D7E5E;
+        text-align: center;
+        color: white; /* Ensure text is visible */
+        font-size: 16px; /* Adjust font size as needed */
+        font-family: Quicksand;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 50px;
+        letter-spacing: 0%;
+        color:white;
+        width:auto;
+        padding:0 30px 0 30px;
+
+    }
+
+    .filter-tab.active {
+        background-color: #9DBF9E;
+        color:#333333;
+    }
+        #tags-container {
+            position: relative; /* Ensures the dropdown menu is positioned relative to this container */
         }
-        .filter-tab {
-            display: inline-block;
+
+        #tags-dropdown-menu {
+            position: absolute; /* Makes the dropdown menu overlay */
+            top: 100%; /* Positions the menu directly below the button */
+            left: 0;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 10; /* Ensures the dropdown appears above other elements */
+            display: none; /* Initially hidden */
             padding: 10px;
-            margin-right: 5px;
-            border: 2px solid black;
+            width: 200px;
+            border-radius: 20px;
+            font-size:18px;
+        }
+
+        #tags-dropdown-button {
             cursor: pointer;
+            width: 200px;
+            height: 100px;
+            background-color: #ED6A5A;
+            font-family: Quicksand;
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 50px;
+            letter-spacing: 0%;
+            color:white;
+            border-radius: 20px;
+            border: none;
         }
-        .filter-tab.active {
-            background-color: #ccc;
+        .tag-filter {
+            margin-bottom:10px;
         }
+
+        .search-container {
+            display: flex;
+            align-items: left;
+            margin-bottom: 10px;
+            flex-direction: row;
+            justify-content: space-between;
+            border-radius: 20px;;
+        }
+
+        .browse-ingredients {
+            font-weight: 600;
+            font-size: 48px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            vertical-align: middle;
+            color:#333333;
+        }
+        .maincontent {
+            margin:auto;
+            margin-top: 20px;
+            width:94%;
+            border:none;        }
+        .ing-img {
+            height: 164px; 
+            object-fit: cover; 
+            width: 100%;
+            border-top-left-radius: 8px; /* Rounded top-left corner */
+            border-top-right-radius: 8px; /* Rounded top-right corner */
+        }
+
+        .tile-name{
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            padding:0 30px 0 30px;
+        }
+
+        .tile-text {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 1.2; /* Adjust line height for better spacing */
+        letter-spacing: 0%;
+        text-align: center;
+        padding: 0 30px 0 30px;
+        text-overflow: ellipsis; /* Adds "..." when text overflows */
+        overflow: hidden; /* Hides overflowing text */
+        display: -webkit-box; /* Enables the use of line clamping */
+        -webkit-line-clamp: 3; /* Limits the text to 3 lines */
+        -webkit-box-orient: vertical; /* Specifies vertical orientation for the box */
+        height: 70px; /* Ensures the height matches the clamped lines */
+    }
     </style>
     <!-- Bring in jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -54,9 +184,24 @@
     <!-- Loads header from header.js -->
     <div id="header"></div>
     <div class="maincontent">
-        <h1>Browse Ingredients</h1>
+        <h1 class="browse-ingredients" >Browse Ingredients</h1>
         <!--Search input-->
-        <input type="text" id="search" placeholder="Search ingredients...">
+            <label for="search" style="display:none">Search Ingredients:</label>
+            <div class="search-container">
+             <input type="text" id="search" placeholder="Search for the ingredient to learn more about substitutions (e.g, eggs, milk, cornstarch).">
+                <!--Tags dropdown-->
+                <div id="tags-container">
+                    <div class="dropdown">
+                        <button id="tags-dropdown-button">Tags</button>
+                        <div id="tags-dropdown-menu" style="display: none;">
+                            <label><input type="checkbox" class="tag-filter" value="vegan">Vegan</label><br>
+                            <label><input type="checkbox" class="tag-filter" value="vegetarian">Vegetarian</label><br>
+                            <label><input type="checkbox" class="tag-filter" value="nut free">Nut-Free</label><br>
+                            <label><input type="checkbox" class="tag-filter" value="dairy free">Dairy-Free</label><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
         <!--Filters by Category-->
         <div class="filter-tabs">
             <div class="filter-tab" data-category="all">All</div>
@@ -77,43 +222,73 @@
             $.getJSON('sampledata.json', function(data) {
                 var ingredients = data;
                 var container = $('#ingredients-container');
+                var currentCategory = 'all';
+                var currentSearchTerm = '';
+                var selectedTags = [];
 
                 // Function to display ingredients
                 function displayIngredients(ingredients) {
                     container.empty();
                     $.each(ingredients, function(index, ingredient) {
                         var tile = $('<div class="tile"></div>');
-                        var img = $('<img>').attr('src', ingredient.image).attr('alt', ingredient.name);
-                        var name = $('<h2></h2>').text(ingredient.name);
-                        var description = $('<p></p>').text(ingredient.description);
-                        var button = $('<button>View Ingredient</button>').attr('onclick', `window.location.href='calculator.html?ingredientId=${ingredient.id}'`);
+                        var img = $('<img class="ing-img">')
+                            .attr('src', ingredient.image)
+                            .attr('alt', ingredient.name)
+                            .css({
+                                height: '164px', // Set the height explicitly
+                                objectFit: 'cover', // Ensure the image fills the space without distortion
+                                width: '100%' // Ensure the image spans the full width of the container
+                            });
+                        var name = $('<h2 class="tile-name"></h2>').text(ingredient.name);
+                        var description = $('<p class="tile-text"></p>').text(ingredient.description);
+                        var button = $('<button class="view-btn">View Ingredient</button>').attr('onclick', `window.location.href='calculator.html?ingredientId=${ingredient.id}'`);
                         tile.append(img, name, description, button);
                         container.append(tile);
                     });
                 }
+
+                // Function to filter ingredients based on search, category, and tags
+                function filterIngredients() {
+    var filteredIngredients = ingredients.filter(function(ingredient) {
+        var matchesCategory = currentCategory === 'all' || ingredient.category === currentCategory;
+        var matchesSearch = ingredient.name.toLowerCase().includes(currentSearchTerm);
+        var matchesTags = selectedTags.length === 0 || selectedTags.some(tag => 
+            ingredient.tags.map(t => t.toLowerCase().replace('-', ' ')).includes(tag.toLowerCase())
+        ); // Normalize tags by replacing hyphens with spaces and converting to lowercase
+        return matchesCategory && matchesSearch && matchesTags;
+    });
+    displayIngredients(filteredIngredients);
+}
+
 
                 // Display all ingredients initially
                 displayIngredients(ingredients);
 
                 // Search functionality
                 $('#search').on('input', function() {
-                    var searchTerm = $(this).val().toLowerCase();
-                    var filteredIngredients = ingredients.filter(function(ingredient) {
-                        return ingredient.name.toLowerCase().includes(searchTerm);
-                    });
-                    displayIngredients(filteredIngredients);
+                    currentSearchTerm = $(this).val().toLowerCase();
+                    filterIngredients();
                 });
 
                 // Filter by category functionality
                 $('.filter-tab').on('click', function() {
-                    var category = $(this).data('category');
+                    currentCategory = $(this).data('category');
                     $('.filter-tab').removeClass('active');
                     $(this).addClass('active');
+                    filterIngredients();
+                });
 
-                    var filteredIngredients = ingredients.filter(function(ingredient) {
-                        return category === 'all' || ingredient.category === category;
-                    });
-                    displayIngredients(filteredIngredients);
+                // Dropdown toggle functionality
+                $('#tags-dropdown-button').on('click', function() {
+                    $('#tags-dropdown-menu').toggle();
+                });
+
+                // Filter by tags functionality
+                $('.tag-filter').on('change', function() {
+                    selectedTags = $('.tag-filter:checked').map(function() {
+                        return $(this).val();
+                    }).get();
+                    filterIngredients();
                 });
 
                 // Set default active filter
