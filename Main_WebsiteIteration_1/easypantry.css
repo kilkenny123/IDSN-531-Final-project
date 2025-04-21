@@ -116,13 +116,6 @@ img {
   width: 100%;
 }
 
-#filters-container {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 100%;
-}
-
 #search-input {
   width: 100%;
 }
