@@ -1,22 +1,69 @@
 $(document).ready(function () {
   const urlParams = new URLSearchParams(window.location.search);
   const ingredientId = urlParams.get("ingredientId");
+
+  if (!ingredientId) {
+    window.location.href = "calculator.html?ingredientId=1";
+  }
+
   let quantity = $("#quantity-input").val();
   let unit = $("#units-dropdown").val();
 
   $.getJSON("sampledata.json", function (data) {
     var ingredients = data;
-    var dropdown = $("#ingredients-dropdown");
-    var tagFilters = [];
+    var ingredientsDiv = $("#ingredients-section");
+
+    var substitutionTagFilters = [];
 
     // Function to display ingredients
     function addInputIngredientOptions(ingredients) {
-      dropdown.empty();
+      ingredientsDiv.empty();
       $.each(ingredients, function (index, ingredient) {
-        var option = $("<option></option>")
-          .attr("value", ingredient.id)
-          .text(ingredient.name);
-        dropdown.append(option);
+        var ingredientCard = $("<div></div>")
+          .addClass("ingredient-card")
+          .attr(
+            "onclick",
+            "window.location.href='calculator.html?ingredientId=" +
+              ingredient.id +
+              "'"
+          );
+
+        if (ingredientId == ingredient.id) {
+          ingredientCard.addClass("selected");
+        }
+
+        var ingredientImage = $("<img>")
+          .attr("src", ingredient.image)
+          .attr("alt", ingredient.name)
+          .addClass("ingredient-image");
+
+        var ingredientDetails = $("<div></div>").addClass("ingredient-details");
+
+        var ingredientName = $("<p></p>")
+          .text(ingredient.name)
+          .addClass("ingredient-name");
+
+        var ingredientTags = $("<div></div>").addClass("tags");
+        $.each(ingredient.tags, function (index, tag) {
+          var tagLabel = $("<span></span>").text(tag).addClass("tag");
+          ingredientTags.append(tagLabel);
+        });
+
+        ingredientDetails.append(ingredientName);
+        ingredientDetails.append(ingredientTags);
+
+        ingredientCard.append(ingredientImage);
+        ingredientCard.append(ingredientDetails);
+
+        ingredientsDiv.append(ingredientCard);
+
+        // Scroll to the selected ingredient
+        if (ingredientId == ingredient.id) {
+          ingredientCard[0].scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+          });
+        }
       });
     }
 
@@ -120,12 +167,10 @@ $(document).ready(function () {
 
           substituteDetailsText.append(substituteDescriptionLabel);
 
-          var substituteTags = $("<div></div>").addClass("substitute-tags");
+          var substituteTags = $("<div></div>").addClass("tags");
 
           $.each(substitutionIngredient.tags, function (index, tag) {
-            var tagLabel = $("<span></span>")
-              .text(tag)
-              .addClass("substitute-tag");
+            var tagLabel = $("<span></span>").text(tag).addClass("tag");
             substituteTags.append(tagLabel);
           });
 
@@ -176,7 +221,7 @@ $(document).ready(function () {
     if (ingredientId) {
       var selectedIngredient = getIngredientById(ingredientId);
       if (selectedIngredient) {
-        dropdown.val(selectedIngredient.id);
+        // dropdown.val(selectedIngredient.id);
         displayIngredientImage(selectedIngredient);
         displaySubstitutions(selectedIngredient);
         displayTagFilterOptions(selectedIngredient);
@@ -193,12 +238,12 @@ $(document).ready(function () {
     // Update substitutions when quantity or unit changes
     $("#quantity-input").on("input", function () {
       quantity = $(this).val();
-      displaySubstitutions(getIngredientById(dropdown.val()));
+      displaySubstitutions(getIngredientById(ingredientId));
     });
 
     $("#units-dropdown").on("change", function () {
       unit = $(this).val();
-      displaySubstitutions(getIngredientById(dropdown.val()));
+      displaySubstitutions(getIngredientById(ingredientId));
     });
 
     // Update substitutions when tag filters are applied
@@ -211,7 +256,46 @@ $(document).ready(function () {
         tagFilters.push(tag);
         $(this).addClass("selected");
       }
-      displaySubstitutions(getIngredientById(dropdown.val()), tagFilters);
+      displaySubstitutions(getIngredientById(ingredientId), tagFilters);
+    });
+
+    /*
+      HANDLE FILTER INPUTS
+    */
+
+    // Function to handle search input
+    $("#search-input").on("input", function () {
+      searchInput = $(this).val().toLowerCase();
+      var filteredIngredients = ingredients.filter(function (ingredient) {
+        return ingredient.name.toLowerCase().includes(searchInput);
+      });
+      addInputIngredientOptions(filteredIngredients);
+    });
+
+    // Function to handle category filter
+    $(".category-filter").on("click", function () {
+      selectedCategory = $(this).text().toLowerCase();
+
+      var filteredIngredients = ingredients.filter(function (ingredient) {
+        return ingredient.category.toLowerCase() === selectedCategory;
+      });
+      addInputIngredientOptions(filteredIngredients);
+    });
+
+    // Function to handle tag filters
+    $(".substitution-tag-filter").on("click", function () {
+      var tag = $(this).text();
+      if (substitutionTagFilters.includes(tag)) {
+        substitutionTagFilters = substitutionTagFilters.filter(
+          (t) => t !== tag
+        );
+      } else {
+        substitutionTagFilters.push(tag);
+      }
+      displaySubstitutions(
+        getIngredientById(ingredientId),
+        substitutionTagFilters
+      );
     });
   }).fail(function () {
     console.error("Error fetching ingredients.");

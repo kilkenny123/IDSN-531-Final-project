@@ -2,58 +2,65 @@
   margin: 0;
 }
 
-#page-title {
-  text-align: center;
+#calculator-container {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid #e0e0e0;
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  width: 100%;
+  max-height: 60vh;
+  overflow: hidden;
 }
 
-#container {
+#ingredients-section {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 50px;
-  gap: 20px;
+  width: 50%;
+  background-color: white;
+  border-radius: 10px 0 0 10px;
+  border-right: 1px solid #e0e0e0;
+  max-height: 100%;
+  overflow-y: scroll;
 }
 
-#tag-filters {
+.ingredient-card {
   display: flex;
-  gap: 5px;
-  flex-wrap: wrap;
-}
-
-.tag-filter {
-  background-color: #e0e0e0;
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-size: 1rem;
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
   cursor: pointer;
 }
 
-.tag-filter:hover {
-  background-color: #d0d0d0;
+.ingredient-card:hover {
+  background-color: #f0f0f0;
 }
 
-.tag-filter.selected {
+.ingredient-card.selected {
   background-color: var(--primary-color);
   color: white;
 }
 
-#calculator-container {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.05);
-  backdrop-filter: blur(10px);
-  border-radius: 10px;
-  padding: 20px;
-  max-width: 800px;
-  width: 100%;
+.ingredient-card.selected .tag {
+  background-color: white;
+  color: var(--text-color);
 }
 
-#ingredient-image-container {
+.ingredient-card:not(:last-child) {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.ingredient-card .ingredient-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+}
+
+.ingredient-card .ingredient-details {
   display: flex;
-  width: 100%;
-  max-height: 300px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
 }
 
 .ingredient-image {
@@ -63,32 +70,11 @@
   border-radius: 10px;
 }
 
-#ingredient-input {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 100%;
-}
-
-select,
-input {
-  border: 1px solid #e0e0e0;
-  padding: 10px;
-  font-size: 1.2rem;
-  border-radius: 5px;
-}
-
-select:focus,
-input:focus {
-  border-color: var(--primary-color);
-  outline: none;
-}
-
 #substitution-options {
   display: flex;
   flex-direction: column;
   border: 1px solid #e0e0e0;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: white;
   border-radius: 5px;
   overflow: hidden;
 }
@@ -122,18 +108,6 @@ input:focus {
   color: #777;
 }
 
-.substitute-tags {
-  display: flex;
-  gap: 5px;
-}
-
-.substitute-tag {
-  background-color: #e0e0e0;
-  padding: 5px;
-  border-radius: 5px;
-  font-size: 0.8rem;
-}
-
 .substitute-image {
   width: 80px;
   border-radius: 5px;
@@ -163,6 +137,7 @@ input:focus {
   flex-direction: column;
   width: 100%;
   gap: 20px;
+  padding: 20px;
 }
 
 #calculator-input {

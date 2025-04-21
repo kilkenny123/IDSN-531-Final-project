@@ -2,6 +2,16 @@
 <html>
   <head>
     <title>EasyPantry - Substitution Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="easypantry.css" />
     <link rel="stylesheet" href="calculator-styles.css" />
     <script src="header.js"></script>
@@ -11,42 +21,41 @@
       });
     </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="filters-script.js"></script>
     <script src="calculator-script.js"></script>
   </head>
   <body>
     <!-- Loads header from header.js -->
     <div id="header"></div>
-    <div id="container">
-      <h1 id="page-title">Substitution Calculator</h1>
-      <div id="calculator-container">
-        <div id="ingredient-input">
-          <p><strong>Ingredient to substitute:</strong></p>
-          <select id="ingredients-dropdown">
-            <!-- jQuery will auto-populate options -->
-          </select>
+    <div class="page-container">
+      <div class="page-content">
+        <h1 id="page-title">Substitution Calculator</h1>
+        <div id="ingredient-filters">
+          <!-- jQuery will auto-populate search & category filters -->
+          <div id="ingredient-search-container"></div>
+          <div id="ingredient-category-filters-container"></div>
         </div>
-        <div id="ingredient-image-container">
-          <!-- jQuery will auto-populate ingredient image -->
-        </div>
-        <div id="calculator-section">
-          <p><strong>Calculate Substitution Quantities</strong>:</p>
-          <div id="calculator-input">
-            <input type="number" placeholder="Quantity" id="quantity-input" />
-            <select name="Units" id="units-dropdown">
-              <option value="oz">oz</option>
-              <option value="g">g</option>
-              <option value="cups">cups</option>
-              <option value="tbsp">tbsp</option>
-              <option value="tsp">tsp</option>
-              <option value="L">L</option>
-              <option value="mL">mL</option>
-            </select>
+        <div id="calculator-container">
+          <div id="ingredients-section">
+            <!-- jQuery will auto-populate ingredients -->
           </div>
-          <div id="tag-filters">
-            <!-- jQuery will auto-populate tags -->
-          </div>
-          <div id="substitution-options">
-            <!-- jQuery will auto-populate substitutions -->
+          <div id="calculator-section">
+            <div id="calculator-input">
+              <input type="number" placeholder="Quantity" id="quantity-input" />
+              <select name="Units" id="units-dropdown">
+                <option value="oz">oz</option>
+                <option value="g">g</option>
+                <option value="cups">cups</option>
+                <option value="tbsp">tbsp</option>
+                <option value="tsp">tsp</option>
+                <option value="L">L</option>
+                <option value="mL">mL</option>
+              </select>
+            </div>
+            <div id="substitution-tag-filters-container"></div>
+            <div id="substitution-options">
+              <!-- jQuery will auto-populate substitutions -->
+            </div>
           </div>
         </div>
       </div>
