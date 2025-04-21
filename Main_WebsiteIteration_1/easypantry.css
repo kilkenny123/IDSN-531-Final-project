@@ -38,6 +38,10 @@ img {
   max-width: 100%;
 }
 
+#logo {
+  width: 200px;
+}
+
 .header {
   position: fixed;
   top: 0;
