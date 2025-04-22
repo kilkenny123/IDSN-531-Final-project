@@ -18,6 +18,9 @@
 body {
   background-color: var(--secondary-color);
   font-family: "Inter", sans-serif;
+  color: var(--text-color);
+  font-weight: 300;
+  font-size: 1rem;
 }
 
 h1,
@@ -27,9 +30,10 @@ h4,
 h5,
 h6 {
   font-family: "Quicksand", sans-serif;
+  color: var(--text-color);
 }
 
-p {
+p, li {
   font-family: "Inter", sans-serif;
   font-weight: 400;
 }
@@ -109,6 +113,32 @@ img {
   text-align: left;
   font-size: 2rem;
   font-weight: 600;
+}
+
+.section-title {
+  text-align: left;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+/* Button Style */
+
+button {
+  font-family: "Quicksand", sans-serif;
+}
+.button-style {
+  background-color: var(--accent-color-1);
+  color: #fff;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+.button-style:hover {
+  background-color: #cf584a;
 }
 
 /* Filter component styles */
