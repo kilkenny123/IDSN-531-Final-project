@@ -1,275 +1,522 @@
 [
-    {
-        "id": 1,
-        "name": "Ing 1",
-        "image": "https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "description": "A red, juicy fruit often used in salads and cooking.",
-        "tags":["Vegan"],
-        "category":"Produce",
-        "substitutes": 
-            [
-                {
-                    "id":1,
-                    "ratio":"1:1",
-                    "xing":1
-                },
-                {
-                    "id":13,
-                    "ratio":"1:3",
-                    "xing":3
-                }
-            ]
-    },
-    {
+  {
+    "id": 1,
+    "name": "Rice",
+    "image": "https://images.unsplash.com/photo-1651793371427-ad065df0d208?q=80&w=2873&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "description": "A staple grain used in a variety of dishes.",
+    "tags": ["Vegan", "Gluten-Free"],
+    "category": "Grains",
+    "substitutes": [
+      {
         "id": 2,
-        "name": "Ing 2",
-        "image": "https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "description": "A red, juicy fruit often used in salads and cooking.",
-        "tags":["Vegan", "Nut-Free"],
-        "category":"Produce",
-        "substitutes": 
-            [
-                {
-                    "id":1,
-                    "ratio":"1:1",
-                    "xing":1
-                },
-                {
-                    "id":5,
-                    "ratio":"1:3",
-                    "xing":3
-                }
-            ]
-    },
-    {
+        "ratio": "1:1",
+        "xing": 1
+      },
+      {
         "id": 3,
-        "name": "Ing 3",
-        "image": "https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "description": "A red, juicy fruit often used in salads and cooking.",
-        "tags":["Vegan", "Nut-Free"],
-        "category":"Produce",
-        "substitutes": 
-            [
-                {
-                    "id":1,
-                    "ratio":"1:1",
-                    "xing":1
-                },
-                {
-                    "id":4,
-                    "ratio":"1:3",
-                    "xing":3
-                }
-            ]
-    },
-    {
+        "ratio": "1:1",
+        "xing": 1
+      },
+      {
         "id": 4,
-        "name": "Ing 4",
-        "image": "https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "description": "A red, juicy fruit often used in salads and cooking.",
-        "tags":["Vegan", "Nut-Free"],
-        "category":"Produce",
-        "substitutes": 
-            [
-                {
-                    "id":2,
-                    "ratio":"1:1",
-                    "xing":1
-                },
-                {
-                    "id":2,
-                    "ratio":"1:3",
-                    "xing":3
-                }
-            ]
-    },
-    {
+        "ratio": "1:1",
+        "xing": 1
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Buckwheat",
+    "image": "https://images.unsplash.com/photo-1613758235306-69cc0a3f614d?q=80&w=2713&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "description": "A nutritious grain-like seed, often used in gluten-free recipes.",
+    "tags": ["Vegan", "Gluten-Free"],
+    "category": "Grains",
+    "substitutes": [
+      {
+        "id": 1,
+        "ratio": "1:1",
+        "xing": 1
+      },
+      {
+        "id": 3,
+        "ratio": "1:1",
+        "xing": 1
+      },
+      {
         "id": 5,
-        "name": "Ing 5",
-        "image": "https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "description": "A red, juicy fruit often used in salads and cooking.",
-        "tags":["Vegan", "Nut-Free"],
-        "category":"Produce",
-        "substitutes": 
-            [
-                {
-                    "id":1,
-                    "ratio":"1:1",
-                    "xing":1
-                },
-                {
-                    "id":2,
-                    "ratio":"1:3",
-                    "xing":3
-                }
-            ]
-    },
-    {
+        "ratio": "1:1",
+        "xing": 1
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Cornmeal",
+    "image": "https://shop.honeyville.com/media/catalog/product/cache/093c956ac64137d9dc9bc83b50a1f5b9/y/e/yellow-corn-meal-honeyville-24.jpg",
+    "description": "A coarsely ground flour made from dried corn, commonly used for baking.",
+    "tags": ["Vegan", "Gluten-Free"],
+    "category": "Grains",
+    "substitutes": [
+      {
+        "id": 1,
+        "ratio": "1:1",
+        "xing": 1
+      },
+      {
+        "id": 2,
+        "ratio": "1:1",
+        "xing": 1
+      },
+      {
+        "id": 4,
+        "ratio": "1:1",
+        "xing": 1
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Millet",
+    "image": "https://arrowheadmills.com/wp-content/uploads/2022/09/puffed-millet-9.jpg",
+    "description": "A small, round grain commonly used in gluten-free dishes.",
+    "tags": ["Vegan", "Gluten-Free"],
+    "category": "Grains",
+    "substitutes": [
+      {
+        "id": 1,
+        "ratio": "1:1",
+        "xing": 1
+      },
+      {
+        "id": 3,
+        "ratio": "1:1",
+        "xing": 1
+      },
+      {
+        "id": 5,
+        "ratio": "1:1",
+        "xing": 1
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Oats",
+    "image": "https://media.post.rvohealth.io/wp-content/uploads/2020/03/oats-oatmeal-732x549-thumbnail.jpg",
+    "description": "A versatile whole grain used in baking, breakfast foods, and more.",
+    "tags": ["Vegan", "Gluten-Free"],
+    "category": "Grains",
+    "substitutes": [
+      {
+        "id": 1,
+        "ratio": "1:1",
+        "xing": 1
+      },
+      {
+        "id": 4,
+        "ratio": "1:1",
+        "xing": 1
+      },
+      {
         "id": 6,
-        "name": "Ing 6",
-        "image": "https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "description": "A red, juicy fruit often used in salads and cooking.",
-        "tags":["Vegan", "Nut-Free"],
-        "category":"Produce",
-        "substitutes": 
-            [
-                {
-                    "id":1,
-                    "ratio":"1:1",
-                    "xing":1
-                },
-                {
-                    "id":2,
-                    "ratio":"1:3",
-                    "xing":3
-                }
-            ]
-    },
-        {
-            "id": 7,
-            "name": "2% Milk",
-            "image": "https://images.unsplash.com/photo-1550583724-b2692b85b150?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "description": "A red, juicy fruit often used in salads and cooking.",
-            "tags":["Vegan", "Nut-Free"],
-            "category":"Dairy",
-            "substitutes": 
-                [
-                    {
-                        "id":1,
-                        "ratio":"1:1",
-                        "xing":1
-                    },
-                    {
-                        "id":2,
-                        "ratio":"1:1",
-                        "xing":3
-                    }
-                ]
-        },
-        {
-            "id": 8,
-            "name": "Ing 2",
-            "image": "https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "description": "A red, juicy fruit often used in salads and cooking.",
-            "tags":["Grains"],
-            "category":"Produce",
-            "substitutes": 
-                [
-                    {
-                        "id":1,
-                        "ratio":"1:1",
-                        "xing":1
-                    },
-                    {
-                        "id":2,
-                        "ratio":"1:1",
-                        "xing":3
-                    }
-                ]
-        },
-        {
-            "id": 9,
-            "name": "Ing 3",
-            "image": "https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "description": "A red, juicy fruit often used in salads and cooking.",
-            "tags":["Vegan", "Nut-Free"],
-            "category":"Produce",
-            "substitutes": 
-                [
-                    {
-                        "id":1,
-                        "ratio":"1:1",
-                        "xing":1
-                    },
-                    {
-                        "id":2,
-                        "ratio":"1:1",
-                        "xing":3
-                    }
-                ]
-        },
-        {
-            "id": 10,
-            "name": "Ing 4",
-            "image": "https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "description": "A red, juicy fruit often used in salads and cooking.",
-            "tags":["Vegan", "Nut-Free"],
-            "category":"Produce",
-            "substitutes": 
-                [
-                    {
-                        "id":1,
-                        "ratio":"1:1",
-                        "xing":1
-                    },
-                    {
-                        "id":2,
-                        "ratio":"1:1",
-                        "xing":3
-                    }
-                ]
-        },
-        {
-            "id": 11,
-            "name": "Ing 5",
-            "image": "https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "description": "A red, juicy fruit often used in salads and cooking.",
-            "tags":["Vegan", "Nut-Free"],
-            "category":"Produce",
-            "substitutes": 
-                [
-                    {
-                        "id":1,
-                        "ratio":"1:1",
-                        "xing":1
-                    },
-                    {
-                        "id":2,
-                        "ratio":"1:1",
-                        "xing":3
-                    }
-                ]
-        },
-        {
-            "id": 12,
-            "name": "Ing 7",
-            "image": "https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "description": "A red, juicy fruit often used in salads and cooking.",
-            "tags":["Vegan", "Nut-Free"],
-            "category":"Produce",
-            "substitutes": 
-                [
-                    {
-                        "id":1,
-                        "ratio":"1:1",
-                        "xing":1
-                    },
-                    {
-                        "id":2,
-                        "ratio":"1:1",
-                        "xing":3
-                    }
-                ]
-        },
-        {
-            "id": 13,
-            "name": "White Rice",
-            "image": "https://images.unsplash.com/photo-1651793371427-ad065df0d208?q=80&w=2873&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            "description": "It's rice, but white.",
-            "tags":["Vegan", "Nut-Free"],
-            "category":"Grains",
-            "substitutes": 
-                [
-                    {
-                        "id":1,
-                        "ratio":"1:1",
-                        "xing":1
-                    },
-                    {
-                        "id":2,
-                        "ratio":"1:1",
-                        "xing":3
-                    }
-                ]
-        }
+        "ratio": "1:1",
+        "xing": 1
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Quinoa",
+    "image": "https://cdn.loveandlemons.com/wp-content/uploads/2019/09/quinoa.jpg",
+    "description": "A high-protein, gluten-free grain often used as a substitute for rice.",
+    "tags": ["Vegan", "Gluten-Free"],
+    "category": "Grains",
+    "substitutes": [
+      {
+        "id": 2,
+        "ratio": "1:1",
+        "xing": 1
+      },
+      {
+        "id": 4,
+        "ratio": "1:1",
+        "xing": 1
+      },
+      {
+        "id": 5,
+        "ratio": "1:1",
+        "xing": 1
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Buttermilk",
+    "image": "https://www.ambitiouskitchen.com/wp-content/uploads/2014/09/How-to-Make-Buttermilk-4.jpg",
+    "description": "A dairy product with a tangy flavor, often used in baking.",
+    "tags": ["Vegetarian"],
+    "category": "Dairy",
+    "substitutes": [
+      {
+        "id": 8,
+        "ratio": "1:1",
+        "xing": 1
+      },
+      {
+        "id": 9,
+        "ratio": "1:1",
+        "xing": 1
+      },
+      {
+        "id": 10,
+        "ratio": "1:1",
+        "xing": 1
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Eggs",
+    "image": "https://cdn.britannica.com/94/151894-050-F72A5317/Brown-eggs.jpg",
+    "description": "A versatile ingredient in cooking, essential for binding and rising.",
+    "tags": ["Vegetarian"],
+    "category": "Dairy",
+    "substitutes": [
+      {
+        "id": 11,
+        "ratio": "1:3",
+        "xing": 3
+      },
+      {
+        "id": 12,
+        "ratio": "1:1",
+        "xing": 1
+      },
+      {
+        "id": 13,
+        "ratio": "1:1",
+        "xing": 1
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Half-and-Half",
+    "image": "https://www.aedairy.com/wp-content/uploads/2022/09/HALFHALF-PINT-product-detail-hero-535px.png",
+    "description": "A mixture of half milk and half cream, used in coffee or cooking.",
+    "tags": ["Vegetarian"],
+    "category": "Dairy",
+    "substitutes": [
+      {
+        "id": 14,
+        "ratio": "1:1",
+        "xing": 1
+      },
+      {
+        "id": 15,
+        "ratio": "1:1",
+        "xing": 1
+      },
+      {
+        "id": 16,
+        "ratio": "1:1",
+        "xing": 1
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Heavy Cream",
+    "image": "https://horizon.com/wp-content/uploads/horizon-organic-heavy-whipping-cream-v2.png",
+    "description": "A rich dairy product often used for cooking and desserts.",
+    "tags": ["Vegetarian"],
+    "category": "Dairy",
+    "substitutes": [
+      {
+        "id": 17,
+        "ratio": "1:1",
+        "xing": 1
+      },
+      {
+        "id": 18,
+        "ratio": "1:1",
+        "xing": 1
+      },
+      {
+        "id": 19,
+        "ratio": "1:1",
+        "xing": 1
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Sour Cream",
+    "image": "https://www.southernliving.com/thmb/Av2kYK_qtLG68Kjsz658t1L74v8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-497100969-2000-bcc4707e1b0a4003a1bff82a848b46d7.jpg",
+    "description": "A creamy, tangy dairy product often used in dips and as a topping.",
+    "tags": ["Vegetarian"],
+    "category": "Dairy",
+    "substitutes": [
+      {
+        "id": 20,
+        "ratio": "1:1",
+        "xing": 1
+      },
+      {
+        "id": 21,
+        "ratio": "1:1",
+        "xing": 1
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Whole Milk",
+    "image": "https://horizon.com/wp-content/uploads/horizon-organic-whole-milk-lockup-v3-.png",
+    "description": "Full-fat milk, often used in baking and cooking.",
+    "tags": ["Vegetarian"],
+    "category": "Dairy",
+    "substitutes": [
+      {
+        "id": 10,
+        "ratio": "1:1",
+        "xing": 1
+      },
+      {
+        "id": 11,
+        "ratio": "1:1",
+        "xing": 1
+      },
+      {
+        "id": 12,
+        "ratio": "1:1",
+        "xing": 1
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Yogurt",
+    "image": "https://images.getrecipekit.com/20240109191538-homemade-yogurt.jpg?aspect_ratio=4:3&quality=90&",
+    "description": "A fermented dairy product used in cooking or eaten on its own.",
+    "tags": ["Vegetarian"],
+    "category": "Dairy",
+    "substitutes": [
+      {
+        "id": 10,
+        "ratio": "1:1",
+        "xing": 1
+      },
+      {
+        "id": 11,
+        "ratio": "1:1",
+        "xing": 1
+      },
+      {
+        "id": 12,
+        "ratio": "1:1",
+        "xing": 1
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Broccoli",
+    "image": "https://snaped.fns.usda.gov/sites/default/files/styles/crop_ratio_7_5/public/seasonal-produce/2018-05/broccoli.jpg.webp?itok=9hD8BBER",
+    "description": "A nutritious vegetable often used in cooking and salads.",
+    "tags": ["Vegan"],
+    "category": "Produce",
+    "substitutes": [
+      {
+        "id": 15,
+        "ratio": "1:1",
+        "xing": 1
+      },
+      {
+        "id": 16,
+        "ratio": "1:1",
+        "xing": 1
+      },
+      {
+        "id": 17,
+        "ratio": "1:1",
+        "xing": 1
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Brussels Sprouts",
+    "image": "https://tinandthyme.uk/wp-content/uploads/2023/01/Cooked-Brussels-Sprouts.jpg",
+    "description": "Small, cabbage-like vegetables often roasted or used in stir-fries.",
+    "tags": ["Vegan"],
+    "category": "Produce",
+    "substitutes": [
+      {
+        "id": 14,
+        "ratio": "1:1",
+        "xing": 1
+      },
+      {
+        "id": 18,
+        "ratio": "1:1",
+        "xing": 1
+      },
+      {
+        "id": 19,
+        "ratio": "1:1",
+        "xing": 1
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Cabbage",
+    "image": "https://d3awvtnmmsvyot.cloudfront.net/api/file/GGosbWO9SYyGxvDaciZf/convert?fit=max&w=570&cache=true",
+    "description": "A leafy vegetable often used in slaws and stir-fries.",
+    "tags": ["Vegan"],
+    "category": "Produce",
+    "substitutes": [
+      {
+        "id": 14,
+        "ratio": "1:1",
+        "xing": 1
+      },
+      {
+        "id": 15,
+        "ratio": "1:1",
+        "xing": 1
+      },
+      {
+        "id": 17,
+        "ratio": "1:1",
+        "xing": 1
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Cauliflower",
+    "image": "https://www.producemarketguide.com/media/user_RZKVrm5KkV/22522/cauliflower_commodity-page.png",
+    "description": "A versatile vegetable used in a variety of dishes, often as a substitute for grains.",
+    "tags": ["Vegan"],
+    "category": "Produce",
+    "substitutes": [
+      {
+        "id": 14,
+        "ratio": "1:1",
+        "xing": 1
+      },
+      {
+        "id": 15,
+        "ratio": "1:1",
+        "xing": 1
+      },
+      {
+        "id": 16,
+        "ratio": "1:1",
+        "xing": 1
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Carrots",
+    "image": "https://healthyschoolrecipes.com/wp-content/uploads/2018/11/carrots.jpg",
+    "description": "A crunchy root vegetable used in salads, stir-fries, and many dishes.",
+    "tags": ["Vegan"],
+    "category": "Produce",
+    "substitutes": [
+      {
+        "id": 19,
+        "ratio": "1:1",
+        "xing": 1
+      },
+      {
+        "id": 17,
+        "ratio": "1:1",
+        "xing": 1
+      },
+      {
+        "id": 20,
+        "ratio": "1:1",
+        "xing": 1
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Shallots",
+    "image": "https://www.savorysimple.net/what-are-shallots/what-are-shallots-035/",
+    "description": "A milder, sweeter type of onion used in many dishes.",
+    "tags": ["Vegan"],
+    "category": "Produce",
+    "substitutes": [
+      {
+        "id": 14,
+        "ratio": "1:1",
+        "xing": 1
+      },
+      {
+        "id": 16,
+        "ratio": "1:1",
+        "xing": 1
+      },
+      {
+        "id": 21,
+        "ratio": "1:1",
+        "xing": 1
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Bok Choy",
+    "image": "https://downshiftology.com/wp-content/uploads/2019/03/Garlic-Ginger-Bok-Choy-main-500x500.jpg",
+    "description": "A leafy green vegetable often used in Asian dishes.",
+    "tags": ["Vegan"],
+    "category": "Produce",
+    "substitutes": [
+      {
+        "id": 18,
+        "ratio": "1:1",
+        "xing": 1
+      },
+      {
+        "id": 19,
+        "ratio": "1:1",
+        "xing": 1
+      },
+      {
+        "id": 21,
+        "ratio": "1:1",
+        "xing": 1
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Kale",
+    "image": "https://www.highmowingseeds.com/media/catalog/product/cache/95cbc1bb565f689da055dd93b41e1c28/2/5/2522.jpg",
+    "description": "A dark, leafy green with a slightly bitter taste, often used in salads and soups.",
+    "tags": ["Vegan"],
+    "category": "Produce",
+    "substitutes": [
+      {
+        "id": 17,
+        "ratio": "1:1",
+        "xing": 1
+      },
+      {
+        "id": 19,
+        "ratio": "1:1",
+        "xing": 1
+      },
+      {
+        "id": 20,
+        "ratio": "1:1",
+        "xing": 1
+      }
+    ]
+  }
 ]
