@@ -71,17 +71,28 @@
       .quick-picks,
       .categories {
         display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
+        justify-content: space-between;
         position: relative;
         z-index: 2;
-      }
-      .quick-picks {
-        margin: 40px 20px;
         gap: 20px;
       }
-      .categories {
-        margin: 40px 20px 40px;
+      .category {
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        flex-grow: 1;
+        background-color: var(--primary-color-light);
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        width: 100%;
+      }
+      .category:hover {
+        background-color: var(--primary-color);
+        color: white;
       }
       .card {
         width: 180px;
@@ -117,36 +128,10 @@
       .sub-list li::before {
         content: "→ ";
       }
-      .categories button {
-        background-color: #9dbf9e;
-        border: none;
-        padding: 10px;
-        border-radius: 12px;
-        width: 140px;
-        height: 120px;
-        margin: 10px;
-        cursor: pointer;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-family: "Quicksand", sans-serif;
-        font-size: 14px;
-        text-align: center;
-        transition: background-color 0.2s ease;
-      }
-      .categories button:hover {
-        background-color: #8daf8e;
-      }
-      .category-button img {
-        width: 40px;
-        height: 40px;
-        margin-bottom: 8px;
-      }
       .calculator-section {
         background-color: #fff;
         color: black;
         padding: 20px;
-        margin: 20px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -296,7 +281,7 @@
 
         <h2 id="section-title">Browse by Category</h2>
         <section class="categories">
-          <button class="categories">
+          <button class="category">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="36"
@@ -317,7 +302,7 @@
             </svg>
             <br />Vegan
           </button>
-          <button class="categories">
+          <button class="category">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="36"
@@ -344,7 +329,7 @@
             </svg>
             <br />Gluten-free
           </button>
-          <button class="categories">
+          <button class="category">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="36"
@@ -367,7 +352,7 @@
             </svg>
             <br />Dairy-free
           </button>
-          <button class="categories">
+          <button class="category">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="36"
@@ -394,7 +379,7 @@
             </svg>
             <br />High-Protein
           </button>
-          <button class="categories">
+          <button class="category">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="36"
@@ -422,7 +407,7 @@
             </svg>
             <br />Vegetarian
           </button>
-          <button class="categories">
+          <button class="category">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="36"
