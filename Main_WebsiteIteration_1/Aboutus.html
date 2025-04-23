@@ -1,0 +1,267 @@
+<href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+rel="stylesheet"
+/>>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+<link rel="stylesheet" href="easypantry.css" />
+<script src="header.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+addHeader("home");
+});
+</script>
+
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f4e3;
+        color: rgb(6, 6, 6);
+        overflow-x: hidden;
+      }
+      .hero {
+        padding: 50px 20px;
+        position: relative;
+        z-index: 2;
+        text-align: center;
+      }
+      .hero h1 {
+        font-size: 30px;
+        margin-bottom: 20px;
+      }
+      .headings {
+        font-size: 20px;
+        margin-left: 100px;
+      }
+      .search-bar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 500px;
+      }
+      .search-bar input {
+        flex: 1;
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        padding: 20px;
+      }
+      .search-bar button {
+        padding: 20px;
+        margin-left: 10px;
+        border: none;
+        background-color: #ed6a5a;
+        color: #fff;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+      .quick-picks,
+      .categories {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        position: relative;
+        z-index: 2;
+      }
+      .quick-picks {
+        margin: 40px 20px;
+      }
+      .categories {
+        margin: 40px 20px 40px;
+      }
+      .card {
+        background-color: #ffffff;
+        color: black;
+        padding: 15px;
+        margin: 10px;
+        width: 150px;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      }
+      .card img {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 5px;
+      }
+      .categories button {
+        background-color: #9dbf9e;
+        width: 100px;
+        height: 100px;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 10px;
+        margin: 5px;
+        cursor: pointer;
+        font-size: 18px;
+        text-align: center;
+      }
+      .calculator-section {
+        background-color: #fff;
+        color: black;
+        padding: 20px;
+        margin: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        gap: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      }
+      .calculator-section button {
+        background-color: #ed6a5a;
+        color: #fff;
+        border: none;
+        padding: 40px 30px;
+        border-radius: 10px;
+        cursor: pointer;
+        white-space: nowrap;
+      }
+      footer {
+        background-color: #d1e4d1;
+        color: #050505;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .footer-logo {
+        font-weight: bold;
+        font-size: 18px;
+      }
+      .footer-social {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+      }
+      .browse {
+        background-color: #ed6a5a;
+        color: #fff;
+        border: none;
+        padding: 20px 20px;
+        margin: 30px;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+
+      @media (max-width: 768px) {
+        header {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .hero h1 {
+          font-size: 28px;
+        }
+        .headings {
+          font-size: 28px;
+        }
+        .search-bar {
+          flex-direction: column;
+        }
+
+        .calculator-section {
+          flex-direction: column;
+          text-align: center;
+        }
+      }
+      .box1{
+        border: solid black  1px;
+        width: 40%; 
+        height: 600px;
+        
+      
+      }
+      .box2{
+        border: solid black  1px;
+        width: 60%;
+        height: 600px;
+        float: right;
+        
+        
+      
+
+      }
+      .subcalc{
+        width: 800px;
+        height: 800px;
+      }
+    </style>
+</head>
+<body>
+<!-- Loads header from header.js -->
+<div id="header"></div>
+<div class="page-container">
+<div class="page-content">
+        <!-- Insert page content here -->
+        <section class="hero">
+          <h1>About us </h1>
+          
+        </section>
+
+        
+        </section>
+
+        <p class="headings">Browse by Category</p>
+        <section class="categories">
+          <button class="categories">Ayaan</button>
+          <button class="categories">Tyler</button>
+          <button class="categories">Mahita</button>
+          <button class="categories">Julia</button>
+          <button class="categories">James</button>
+        
+          
+        </section>
+      
+        <section class="calculator-section">
+          <div>
+            <strong>Try our Substitution Calculator</strong>
+            <br />
+            
+          </div>
+          <button>Go to Calculator</button>
+        </section>
+
+        <footer>
+          <div class="footer-logo">Easy Pantry</div>
+          <div class="footer-social">
+            <span>Follow Us:</span>
+            <a href="#" aria-label="Instagram"
+              ><img
+                width="24"
+                height="24"
+                src="https://img.icons8.com/ios/24/instagram-new--v1.png"
+                alt="instagram-new--v1"
+            /></a>
+            <a href="#" aria-label="TikTok"
+              ><img
+                width="24"
+                height="24"
+                src="https://img.icons8.com/material-outlined/24/tiktok.png"
+                alt="tiktok"
+            /></a>
+            <a href="#" aria-label="Pinterest"
+              ><img
+                width="24"
+                height="24"
+                src="https://img.icons8.com/ios/24/pinterest--v1.png"
+                alt="pinterest--v1"
+            /></a>
+            <a href="#" aria-label="Tumblr"
+              ><img
+                width="24"
+                height="24"
+                src="https://img.icons8.com/ios/24/tumblr--v1.png"
+                alt="tumblr--v1"
+            /></a>
+          </div>
+        </footer>
+</div>
+</div>
+</body>
