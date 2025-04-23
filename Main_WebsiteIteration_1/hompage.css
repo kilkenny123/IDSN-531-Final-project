@@ -1,0 +1,217 @@
+a {
+    text-decoration: none;
+  }
+
+section {
+    margin-top: 30px;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .hero-content {
+    flex: 1;
+    min-width: 300px;
+  }
+  .hero-image {
+    flex: 1;
+    min-width: 250px;
+  }
+  .hero-image img {
+    max-width: 100%;
+    height: auto;
+  }
+  .search-bar {
+    display: flex;
+    align-items: center;
+    max-width: 500px;
+    margin-top: 30px;
+  }
+  .search-bar input {
+    flex: 1;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+  }
+  .search-bar button {
+    margin-left: 10px;
+  }
+  .quick-picks,
+  .categories, 
+  .steps {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+    gap: 20px;
+  }
+  .category {
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    flex-grow: 1;
+    background-color: var(--primary-color-light);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+  }
+  .category:hover {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  .card {
+    width: 100%;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: "Quicksand", sans-serif;
+  }
+  .card p {
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+    line-height: 1.4;
+  }
+  .card img {
+    border-radius: 50%;
+    background: #f7e785;
+    padding: 5px;
+  }
+  .sub-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: 14px;
+  }
+  .sub-list li::before {
+    content: "→ ";
+  }
+  .calculator-section {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    color: black;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    gap: 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .calculator-section button {
+    background-color: #ed6a5a;
+    color: #fff;
+    border: none;
+    padding: 40px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  footer {
+    background-color: #d1e4d1;
+    color: #050505;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .footer-logo {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  .footer-social {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+  .browse {
+    margin: 30px auto;
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .hero h1 {
+      font-size: 28px;
+    }
+    .hero {
+      flex-direction: column;
+    }
+    .hero-image {
+      text-align: center;
+    }
+    .hero-image img {
+      width: 80%;
+    }
+    .headings {
+      font-size: 28px;
+    }
+    .search-bar {
+      flex-direction: column;
+    }
+    .calculator-section {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  /*Overview Section*/
+  
+  .step {
+    padding: 40px 20px;
+    width: 250px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #f7e785;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    text-align: center;
+  }
+  
+  .step img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 15px;
+  }
+  
+  .step h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .why-easy-pantry ul {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  .why-easy-pantry li {
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  

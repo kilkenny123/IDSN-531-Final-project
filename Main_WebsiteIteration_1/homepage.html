@@ -15,8 +15,9 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
-    <!---Stylesheet--->
+    <!---Stylesheets--->
     <link rel="stylesheet" href="easypantry.css" />
+    <link rel="stylesheet" href="hompage.css" />
     <!---Header Script--->
     <script src="header.js"></script>
     <!-- Footer Script -->
@@ -27,179 +28,6 @@
         addFooter();
       });
     </script>
-
-    <style>
-      a {
-        text-decoration: none;
-      }
-      .hero {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 20px;
-      }
-      .hero-content {
-        flex: 1;
-        min-width: 300px;
-      }
-      .hero-image {
-        flex: 1;
-        min-width: 250px;
-      }
-      .hero-image img {
-        max-width: 100%;
-        height: auto;
-      }
-      .search-bar {
-        display: flex;
-        align-items: center;
-        max-width: 500px;
-        margin-top: 30px;
-      }
-      .search-bar input {
-        flex: 1;
-        padding: 15px;
-        border-radius: 10px;
-        border: none;
-        outline: none;
-        font-size: 16px;
-      }
-      .search-bar button {
-        margin-left: 10px;
-      }
-      .quick-picks,
-      .categories {
-        display: flex;
-        justify-content: space-between;
-        position: relative;
-        z-index: 2;
-        gap: 20px;
-      }
-      .category {
-        margin: 0;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        flex-grow: 1;
-        background-color: var(--primary-color-light);
-        border: none;
-        border-radius: 10px;
-        cursor: pointer;
-        width: 100%;
-      }
-      .category:hover {
-        background-color: var(--primary-color);
-        color: white;
-      }
-      .card {
-        width: 100%;
-        min-height: 220px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        padding: 20px;
-        border-radius: 15px;
-        background-color: #ffffff;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        font-family: "Quicksand", sans-serif;
-      }
-      .card p {
-        font-size: 14px;
-        margin-top: 10px;
-        text-align: center;
-        line-height: 1.4;
-      }
-      .card img {
-        border-radius: 50%;
-        background: #f7e785;
-        padding: 5px;
-      }
-      .sub-list {
-        padding: 0;
-        margin: 0;
-        list-style: none;
-        font-size: 14px;
-      }
-      .sub-list li::before {
-        content: "→ ";
-      }
-      .calculator-section {
-        background-color: #fff;
-        color: black;
-        padding: 20px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        text-align: left;
-        gap: 20px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-      }
-      .calculator-section button {
-        background-color: #ed6a5a;
-        color: #fff;
-        border: none;
-        padding: 40px 30px;
-        border-radius: 10px;
-        cursor: pointer;
-        white-space: nowrap;
-      }
-      footer {
-        background-color: #d1e4d1;
-        color: #050505;
-        padding: 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-      }
-      .footer-logo {
-        font-weight: bold;
-        font-size: 18px;
-      }
-      .footer-social {
-        display: flex;
-        gap: 15px;
-        align-items: center;
-      }
-      .browse {
-        margin: 30px auto;
-        display: block;
-      }
-
-      @media (max-width: 768px) {
-        header {
-          flex-direction: column;
-          align-items: flex-start;
-        }
-        .hero h1 {
-          font-size: 28px;
-        }
-        .hero {
-          flex-direction: column;
-        }
-        .hero-image {
-          text-align: center;
-        }
-        .hero-image img {
-          width: 80%;
-        }
-        .headings {
-          font-size: 28px;
-        }
-        .search-bar {
-          flex-direction: column;
-        }
-        .calculator-section {
-          flex-direction: column;
-          text-align: center;
-        }
-      }
-    </style>
   </head>
 
   <body>
@@ -209,7 +37,7 @@
       <div class="page-content">
         <section class="hero">
           <div class="hero-content">
-            <h1 id="page-title">
+            <h1 class="page-title">
               Cook with what you've got - Smart ingredient swaps in seconds
             </h1>
             <div class="search-bar">
@@ -226,7 +54,7 @@
           </div>
         </section>
 
-        <h2 id="section-title">Popular Substitutions</h2>
+        <h2 class="section-title">Popular Substitutions</h2>
         <section class="quick-picks">
           <div class="card">
             <img
@@ -278,7 +106,7 @@
           <button class="browse button-style">Browse All Ingredients →</button>
         </a>
 
-        <h2 id="section-title">Browse by Category</h2>
+        <h2 class="section-title">Browse by Category</h2>
         <section class="categories">
           <button class="category">
             <svg
@@ -433,14 +261,51 @@
 
         <section class="calculator-section">
           <div>
-            <strong>Try our Substitution Calculator</strong>
-            <br />
+            <h3>Try our Substitution Calculator</h3>
+            <br/>
             <p>
               Out of 3 eggs? Not enough flour? Enter your recipe amount and get
               exact substitution measurements.
             </p>
           </div>
+          <a href="calculator.html">
           <button class="button-style">Go to Calculator</button>
+          </a>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="how-it-works">
+          <h2 class="section-title">How It Works</h2>
+          <section class="steps">
+            <div class="step">
+              <img src="https://img.icons8.com/ios-filled/50/search.png" alt="Search" />
+              <h3>Search or Browse</h3>
+              <p>Look up your missing ingredient or explore categories tailored to your needs.</p>
+            </div>
+            <div class="step">
+              <img src="https://img.icons8.com/ios-filled/50/replace.png" alt="Substitute" />
+              <h3>Find Substitutes</h3>
+              <p>View the best alternative ingredients based on dietary preferences or availability.</p>
+            </div>
+            <div class="step">
+              <img src="https://img.icons8.com/ios-filled/50/cooking-book.png" alt="Cook Confidently" />
+              <h3>Cook Confidently</h3>
+              <p>Use your chosen substitute and enjoy stress-free cooking with what you have!</p>
+            </div>
+          </section>
+        </section>
+
+        <!-- Why Easy Pantry Section -->
+        <section class="why-easy-pantry">
+          <h2 class="section-title">Why Easy Pantry?</h2>
+          <section class="quick-picks">
+          <ul>
+            <li>✅ <strong>Comprehensive Database:</strong> More substitutions than any recipe site.</li>
+            <li>✅ <strong>Smart Search & Filters:</strong> Quickly find what you need without digging.</li>
+            <li>✅ <strong>Diet-Friendly:</strong> Vegan, gluten-free, and allergy-safe options.</li>
+            <li>✅ <strong>Mobile-First:</strong> Designed for fast use while you're shopping.</li>
+          </ul>
+        </section>
         </section>
       </div>
     </div>

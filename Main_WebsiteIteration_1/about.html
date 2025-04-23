@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EasyPantry - About Us</title>
+    <!---Fonts--->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!---Stylesheet--->
+    <link rel="stylesheet" href="easypantry.css" />
+    <!---Header Script--->
+    <script src="header.js"></script>
+    <!-- Footer Script -->
+    <script src="footer.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        addHeader("home");
+        addFooter();
+      });
+    </script>
+    <style>
+        .about-section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .about-text {
+            flex: 1 1 400px;
+        }
+
+        .about-photo {
+            flex: 1 1 300px;
+        }
+
+        .about-photo img {
+            max-width: 100%;
+            height: 40%;
+            border-radius: 50%;
+        }
+
+        .team-section h2 {
+            margin-bottom: 30px;
+        }
+
+        .team-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .team-member {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            flex: 1 1 300px;
+            max-width: 300px;
+            text-align: center;
+        }
+
+        .team-member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .team-member h3,.about-section h3 {
+            margin: 10px 0 5px;
+            font-family: 'Quicksand', sans-serif;
+            color: #739475;
+        }
+
+        @media (max-width: 768px) {
+        .about-section {
+            flex-direction: column;
+        }
+        }
+    </style>
+  </head>
+
+  <body>
+<!-- Loads header from header.js -->
+    <div id="header"></div>
+    <div class="page-container">
+      <div class="page-content">
+        <section class="about-section">
+            <div class="about-text">
+              <h1 class="page-title">About Easy Pantry</h1>
+              <br/>
+              <p>Easy Pantry was created to help home cooks find quick, reliable ingredient substitutions—no last-minute store runs, no stress.</p>
+              <br/>
+              <p>The idea started with our teammate Ayaan, who once found himself halfway through baking his grandma’s carrot cake with no eggs in sight. After frantically searching for a swap, he realized: there should be an easier way.</p>
+              <br/>
+              <p>So we built one. Our team of food lovers and makers came together to create a tool that’s simple, smart, and designed to save your recipe (and your day).</p>
+              <br/>
+              <p>Whether you're out of buttermilk or avoiding gluten, Easy Pantry is here to help you keep cooking with confidence.</p>
+              <h3>~ The Easy Pantry Team</h3>
+            </div>
+            <div class="about-photo">
+              <img src="Eggless-Banana-Bread-11-735x1103.png" alt="Cooking with Easy Pantry">
+            </div>
+        </section>
+      
+          <section class="team-section">
+            <h2>Meet the Team</h2>
+            <div class="team-grid">
+              <div class="team-member">
+                <img src="Ayaan.JPG" alt="Ayaan">
+                <h3>Ayaan</h3>
+                <p><strong>Back-end Developer</strong></p>
+                <p>Product thinker and pantry problem-solver. Ayaan created our search filters, and contributed the javascript, html, and css for our calculator page. He sparked the idea behind Easy Pantry.</p>
+              </div>
+              <div class="team-member">
+                <img src="Julia.jpeg" alt="Julia">
+                <h3>Julia</h3>
+                <p><strong>Back-end Developer</strong></p>
+                <p>Back-end developer who ensures Easy Pantry runs fast—even when you're out of baking soda. She contributed the javascript, html, and css for the browse and request ingredients pages.</p>
+              </div>
+              <div class="team-member">
+                <img src="Mahita.JPG" alt="Mahita">
+                <h3>Mahita</h3>
+                <p><strong>UX/UI Desginer</strong></p>
+                <p>Web designer who loves food just as much as she loves Figma. Mahita did our branding, designed the UI and contributed to the html and css of the home and about pages.</p>
+              </div>
+              <div class="team-member">
+                <img src="James.JPG" alt="James">
+                <h3>James</h3>
+                <p><strong>Data Researcher</strong></p>
+                <p>Content and data lead. James writes with flavor and helps you find your swaps. He contributed to the Browse Ingredients and Contact pages.</p>
+              </div>
+              <div class="team-member">
+                <img src="Tyler.JPG" alt="Tyler">
+                <h3>Tyler</h3>
+                <p><strong>Front-end Developer</strong></p>
+                <p>Front-end Developer with a passion for functional interfaces and sourdough bread. Tyler contributed to the html and css for the homepage.</p>
+              </div>
+            </div>
+          </section>
+        </div>
+    </div>
+          <!-----Footer----->
+          <div id="footer"></div>
+        </div>
+  </body>
+  </html>
