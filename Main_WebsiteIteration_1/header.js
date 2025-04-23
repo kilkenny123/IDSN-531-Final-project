@@ -8,6 +8,7 @@ headerTemplate.innerHTML = `
               <a href="homepage.html" id="home">Home</a>
               <a href="BrowseIngredients.html" id="ingredients">Browse Ingredients</a>
               <a href="calculator.html" id="calculator">Substitution Calculator</a>
+            <a href="RequestPage.html" id="request">Substitution Calculator</a>
           </div>
         </div>
     </div>
