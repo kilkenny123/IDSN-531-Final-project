@@ -83,3 +83,15 @@
   -webkit-box-orient: vertical; /* Specifies vertical orientation for the box */
   height: 70px; /* Ensures the height matches the clamped lines */
 }
+
+@media screen and (max-width: 768px) {
+  #ingredients-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #ingredients-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

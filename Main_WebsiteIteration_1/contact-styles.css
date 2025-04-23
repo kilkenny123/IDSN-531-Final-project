@@ -1,0 +1,83 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f4e3;
+  color: rgb(6, 6, 6);
+  overflow-x: hidden;
+}
+.hero {
+  padding: 50px 20px;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.headings {
+  font-size: 20px;
+  margin-left: 100px;
+}
+.Contact,
+.faqs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.sections {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.calculator-section {
+  background-color: #fff;
+  color: black;
+  padding: 20px;
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  gap: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+.calculator-section button {
+  background-color: #ed6a5a;
+  color: #fff;
+  border: none;
+  padding: 40px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+input[type="submit"] {
+  background-color: var(--primary-color);
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--primary-color-dark);
+}
+
+@media (max-width: 768px) {
+  .calculator-section {
+    flex-direction: column;
+    text-align: center;
+  }
+}

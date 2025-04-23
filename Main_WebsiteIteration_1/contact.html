@@ -1,301 +1,118 @@
-<href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-rel="stylesheet"
-/>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EasyPantry - Substitution Calculator</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
       rel="stylesheet"
     />
-<link rel="stylesheet" href="easypantry.css" />
-<script src="header.js"></script>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-addHeader("home");
-});
-</script>
-
-    <style>
-      body {
-        font-family: "Poppins", sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f8f4e3;
-        color: rgb(6, 6, 6);
-        overflow-x: hidden;
-      }
-      .hero {
-        padding: 50px 20px;
-        position: relative;
-        z-index: 2;
-        text-align: center;
-      }
-      .hero h1 {
-        font-size: 30px;
-        margin-bottom: 20px;
-      }
-      .headings {
-        font-size: 20px;
-        margin-left: 100px;
-      }
-      .search-bar {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto;
-        width: 100%;
-        max-width: 500px;
-      }
-      .search-bar input {
-        flex: 1;
-        padding: 10px;
-        border-radius: 10px;
-        border: none;
-        outline: none;
-        padding: 20px;
-      }
-      .search-bar button {
-        padding: 20px;
-        margin-left: 10px;
-        border: none;
-        background-color: #ed6a5a;
-        color: #fff;
-        border-radius: 10px;
-        cursor: pointer;
-      }
-      .quick-picks,
-      .categories {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        position: relative;
-        z-index: 2;
-      }
-      .quick-picks {
-        margin: 40px 20px;
-      }
-      .categories {
-        margin: 40px 20px 40px;
-      }
-      .card {
-        background-color: #ffffff;
-        color: black;
-        padding: 15px;
-        margin: 10px;
-        width: 150px;
-        text-align: center;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-      }
-      .card img {
-        width: 40px;
-        height: 40px;
-        margin-bottom: 5px;
-      }
-      .categories button {
-        background-color: #9dbf9e;
-        width: 100px;
-        height: 100px;
-        border: none;
-        padding: 10px 15px;
-        border-radius: 10px;
-        margin: 5px;
-        cursor: pointer;
-        font-size: 18px;
-        text-align: center;
-      }
-      .calculator-section {
-        background-color: #fff;
-        color: black;
-        padding: 20px;
-        margin: 20px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        text-align: left;
-        gap: 20px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-      }
-      .calculator-section button {
-        background-color: #ed6a5a;
-        color: #fff;
-        border: none;
-        padding: 40px 30px;
-        border-radius: 10px;
-        cursor: pointer;
-        white-space: nowrap;
-      }
-      footer {
-        background-color: #d1e4d1;
-        color: #050505;
-        padding: 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-      }
-      .footer-logo {
-        font-weight: bold;
-        font-size: 18px;
-      }
-      .footer-social {
-        display: flex;
-        gap: 15px;
-        align-items: center;
-      }
-      .browse {
-        background-color: #ed6a5a;
-        color: #fff;
-        border: none;
-        padding: 20px 20px;
-        margin: 30px;
-        border-radius: 10px;
-        cursor: pointer;
-      }
-
-      @media (max-width: 768px) {
-        header {
-          flex-direction: column;
-          align-items: flex-start;
-        }
-        .hero h1 {
-          font-size: 28px;
-        }
-        .headings {
-          font-size: 28px;
-        }
-        .search-bar {
-          flex-direction: column;
-        }
-
-        .calculator-section {
-          flex-direction: column;
-          text-align: center;
-        }
-        
-    }
-
-    </style>
-</head>
-<body>
-<!-- Loads header from header.js -->
-<div id="header"></div>
-<div class="page-container">
-<div class="page-content">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="easypantry.css" />
+    <link rel="stylesheet" href="contact-styles.css" />
+    <!-- Bring in jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Header Script -->
+    <script src="header.js"></script>
+    <!-- Footer Script -->
+    <script src="footer.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        addHeader("contact");
+        addFooter();
+      });
+    </script>
+  </head>
+  <body>
+    <!-- Loads header from header.js -->
+    <div id="header"></div>
+    <div class="page-container">
+      <div class="page-content">
         <!-- Insert page content here -->
         <section class="hero">
-          <h1>Need Assistance? </h1>
-          <hr>
-          <br clear="both"> <br clear="both">
-
-          
+          <h1 id="page-title">Need Assistance?</h1>
         </section>
-
-        <div class="container"> <h3>Contact us</h3>
-            
-            <br clear="both"> <br clear="both">
-            <br clear="both"> <br clear="both">
+        <div class="sections">
+          <div class="container">
+            <h3>Report a technical issue</h3>
             <form action="action_page.php">
-          
               <label for="fname">First Name</label>
-              <input type="text" id="fname" name="firstname" placeholder="Your name..">
-              <br clear="both"> <br clear="both">
-          
+              <input
+                type="text"
+                id="fname"
+                name="firstname"
+                placeholder="Your name.."
+              />
               <label for="lname">Last Name</label>
-              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-              <br clear="both"> <br clear="both">
-             
-              <form>
-                <br clear="both"> <br clear="both">
-                <div class="label"> Email </div>
-                <input type="text" name="Email" placeholder="john.doe@gmail.com" required>
-              </select>
-              <br clear="both"> <br clear="both">
+              <input
+                type="text"
+                id="lname"
+                name="lastname"
+                placeholder="Your last name.."
+              />
+              <div class="label">Email:</div>
+              <input
+                type="text"
+                name="Email"
+                placeholder="john.doe@gmail.com"
+                required
+              />
               <label for="subject">Subject</label>
-              <br clear="both"> <br clear="both">
-              <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-              <br clear="both"> <br clear="both">
-              <input type="submit" value="Submit">
-              <br clear="both"> <br clear="both">
-              <input type="checkbox" id="vehicle1" name="mailing" value="mailing">
-  <label for="vehicle1"> Sign up for email updates!</label><br>
-          
+              <textarea
+                id="subject"
+                name="subject"
+                placeholder="Write something.."
+                style="height: 200px"
+              ></textarea>
+              <input type="submit" value="Submit" />
             </form>
           </div>
-          <hr>
-        <div class="Contact">
-        <h3>
-                 Contact Information
-                
-        </h3>
-        <br clear="both"> <br clear="both">
-            <p> Hours of Operations: Monday - Friday; 9:00 a.m - 2:00 p.m (PST)</p> 
+          <hr />
+          <div class="Contact">
+            <h3>Contact Information</h3>
             <p>
-            <a href="tel: +44 20 7123 4567"> Phone Number</a>
+              Hours of Operations: Monday - Friday; 9:00 a.m - 2:00 p.m (PST)
             </p>
-        
-        
             <p>
-                <a href="https://www.google.com/maps/place/USC+Iovine+and+Young+Academy/@34.018688,-118.2910326,17z/data=!3m1!4b1!4m6!3m5!1s0x80c2c771c10cab79:0xf8f20144d59244cd!8m2!3d34.0186836!4d-118.2884577!16s%2Fg%2F11hdy3lyl6?hl=en&entry=ttu&g_ep=EgoyMDI1MDQyMC4wIKXMDSoASAFQAw%3D%3D"> Headquarters </a>
-            </p> 
-            <hr>
+              <a href="tel: +44 20 7123 4567"> Phone Number</a>
+            </p>
+            <p>
+              <a
+                href="https://www.google.com/maps/place/USC+Iovine+and+Young+Academy/@34.018688,-118.2910326,17z/data=!3m1!4b1!4m6!3m5!1s0x80c2c771c10cab79:0xf8f20144d59244cd!8m2!3d34.0186836!4d-118.2884577!16s%2Fg%2F11hdy3lyl6?hl=en&entry=ttu&g_ep=EgoyMDI1MDQyMC4wIKXMDSoASAFQAw%3D%3D"
+              >
+                Headquarters
+              </a>
+            </p>
+          </div>
+          <hr />
+          <div class="faqs">
             <h3>FAQ's</h3>
-            <br clear="both"> <br clear="both">
             <ul>
-              
-                <li>Cant find an ingredient?</li>
-                <ul>Please refer to the feedback page to add your favorite ingredients</ul>
-                <li>How can I contribute?</li>
-                <ul>Provide feedback! Add us on Linkdin, follow for weekly recipe substit and carreer opportunities</ul>
-                <li>How do I report a technical issue</li>
-                <ul>Please send an email to us at Easypantry@gmail.com</ul>
+              <li>Cant find an ingredient?</li>
+              <ul>
+                Please refer to the feedback page to add your favorite
+                ingredients
+              </ul>
+              <li>How can I contribute?</li>
+              <ul>
+                Provide feedback! Add us on Linkdin, follow for weekly recipe
+                substit and carreer opportunities
+              </ul>
+              <li>How do I report a technical issue</li>
+              <ul>
+                Please send an email to us at Easypantry@gmail.com
+              </ul>
             </ul>
-           
+          </div>
         </div>
-  
-       </section> 
-      
-        <section class="calculator-section">
-          <div>
-            <strong>Try our Substitution Calculator</strong>
-            <br />
-            
-          </div>
-          <button>Go to Calculator</button>
-        </section>
-
-        <footer>
-          <div class="footer-logo">Easy Pantry</div>
-          <div class="footer-social">
-            <span>Follow Us:</span>
-            <a href="#" aria-label="Instagram"
-              ><img
-                width="24"
-                height="24"
-                src="https://img.icons8.com/ios/24/instagram-new--v1.png"
-                alt="instagram-new--v1"
-            /></a>
-            <a href="#" aria-label="TikTok"
-              ><img
-                width="24"
-                height="24"
-                src="https://img.icons8.com/material-outlined/24/tiktok.png"
-                alt="tiktok"
-            /></a>
-            <a href="#" aria-label="Pinterest"
-              ><img
-                width="24"
-                height="24"
-                src="https://img.icons8.com/ios/24/pinterest--v1.png"
-                alt="pinterest--v1"
-            /></a>
-            <a href="#" aria-label="Tumblr"
-              ><img
-                width="24"
-                height="24"
-                src="https://img.icons8.com/ios/24/tumblr--v1.png"
-                alt="tumblr--v1"
-            /></a>
-          </div>
-        </footer>
-</div>
-</div>
-</body>
+      </div>
+    </div>
+    <div id="footer"></div>
+  </body>
+</html>

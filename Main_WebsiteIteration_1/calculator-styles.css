@@ -41,6 +41,10 @@
   color: white;
 }
 
+.ingredient-card.selected .ingredient-details .ingredient-name {
+  color: white;
+}
+
 .ingredient-card.selected .tag {
   background-color: white;
   color: var(--text-color);
@@ -153,4 +157,45 @@
 #units-dropdown {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+}
+
+@media screen and (max-width: 768px) {
+  #calculator-container {
+    flex-direction: column;
+    max-height: none;
+  }
+
+  #ingredients-section {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #e0e0e0;
+    flex-direction: row;
+  }
+
+  .ingredient-card {
+    width: 100%;
+    min-width: 200px;
+    align-items: center;
+    padding: 10px;
+    flex-direction: column;
+  }
+
+  .ingredient-card .ingredient-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .ingredient-details {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+
+  #calculator-section {
+    width: 100%;
+  }
+
+  #ingredients-section {
+    border-radius: 0;
+  }
 }
