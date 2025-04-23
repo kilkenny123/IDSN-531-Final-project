@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request Page</title>
+  <link rel="stylesheet" href="easypantry.css">
+  <script>
+    function handleDropdownChange(value) {
+      const substitutionBox = document.getElementById('substitution-box');
+      const ingredientBox = document.getElementById('ingredient-box');
+      const substitutionForBox = document.getElementById('substitution-for-box');
+
+      // Reset visibility
+      substitutionBox.style.display = 'none';
+      substitutionForBox.style.display = 'none';
+      ingredientBox.style.display = 'none';
+
+      // Show relevant fields based on selection
+      if (value === 'Substitution') {
+        substitutionBox.style.display = 'block';
+        substitutionForBox.style.display = 'block';
+      } else if (value === 'Ingredient') {
+        ingredientBox.style.display = 'block';
+      }
+    }
+
+    function handleSubmit(event) {
+      event.preventDefault(); // Prevent the default form submission behavior
+      const formContainer = document.querySelector('.form-container');
+      formContainer.innerHTML = '<p>Thank you for the request. We will review this when we can!</p>';
+    }
+  </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  <script src="header.js"></script>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+  addHeader("home");
+  });
+  </script>
+  <style>
+    .form-group {
+      display: flex;
+      flex-direction: column; /* Stack label and input vertically */
+      margin-bottom: 15px;
+    }
+
+    label {
+      margin-bottom: 5px; /* Add spacing between label and input */
+    }
+
+    .page-banner {
+        width:60%;
+        background-image: url("EP_Heroimg.png");
+        background-size:300px;
+        background-position: center;
+        height:300px;
+        margin:auto;
+    }
+    label {
+        font-weight: 600;
+    }
+    textarea {
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    }
+    textarea,input,select {
+        border-width:2px;
+    }
+    textarea:focus{
+    border-color: var(--primary-color);
+    outline: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+<div id="header"></div>
+
+  <!-- Banner Image -->
+  <div class="page-banner" style="margin-top:150px;">
+  </div>
+
+  <!-- Page Title -->
+  <div class="page-container" style="margin-top:0;">
+    <div class="page-content">
+      <h1 class="page-title" style="text-align: center; margin-bottom: 0;font-family: Quicksand;">Request an Ingredient or Substitution</h1>
+      <!-- Form -->
+      <div class="form-container" style="background-color: #FFFFFF; padding: 20px; border-radius: 20px;">
+        <form onsubmit="handleSubmit(event)">
+          <!-- First Name -->
+          <div class="form-group">
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first-name" required>
+          </div>
+
+          <!-- Last Name -->
+          <div class="form-group">
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last-name" required>
+          </div>
+
+          <!-- Email -->
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <!-- Dropdown -->
+          <div class="form-group">
+            <label for="request-type">Are you requesting a new ingredient or substitution?</label>
+            <select id="request-type" name="request-type" onchange="handleDropdownChange(this.value)" required>
+              <option value="">Select an option</option>
+              <option  value="Ingredient">Ingredient</option>
+              <option value="Substitution">Substitution</option>
+            </select>
+          </div>
+
+          <!-- Ingredient Input -->
+          <div id="ingredient-box" class="form-group" style="display: none;">
+            <label for="ingredient" class="form-group">Ingredient Name:</label>
+            <input type="text" id="ingredient" name="ingredient" style="width:100%">
+          </div>
+
+          <!-- Substitution For Input -->
+          <div id="substitution-for-box" class="form-group" style="display: none;">
+            <label for="substitution-for" class="form-group">What ingredient is this substitution for?</label>
+            <input type="text" id="substitution-for" name="substitution-for" style="width:100%">
+          </div>
+
+          <!-- Substitution Input -->
+          <div id="substitution-box" class="form-group" style="display: none;">
+            <label for="substitution" class="form-group">Substitution Name(s):</label>
+            <textarea id="substitution" name="substitution" rows="4" style="width:100%"></textarea>
+          </div>
+
+          <!-- Dietary Restrictions -->
+          <div class="form-group">
+            <label for="dietary-restrictions" >Are there any dietary restrictions we should keep in mind?</label>
+            <input type="text" id="dietary-restrictions" name="dietary-restrictions">
+          </div>
+
+          <!-- Submit Button -->
+          <div class="form-group">
+            <button type="submit" class="button-style" style="width:300px;margin:auto;margin-top:30px;">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+<div id="footer"></div>
+</body>
+</html>
