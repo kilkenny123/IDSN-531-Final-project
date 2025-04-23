@@ -152,6 +152,7 @@
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   flex-grow: 1;
+  min-width: 0;
 }
 
 #units-dropdown {
@@ -189,6 +190,28 @@
     width: 100%;
     text-align: center;
     align-items: center;
+  }
+
+  .substitution-option {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .amount-details {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .substitute-details {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .substitute-image {
+    width: 100%;
+    height: auto;
   }
 
   #calculator-section {

@@ -309,6 +309,15 @@ input:focus {
 }
 
 @media (max-width: 1000px) {
+  .header {
+    padding: 20px;
+  }
+  .page-container {
+    padding: 20px;
+  }
+  #logo {
+    width: 150px;
+  }
   .header-content {
     position: relative;
   }
