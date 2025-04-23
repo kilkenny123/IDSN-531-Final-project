@@ -87,6 +87,15 @@ img {
   align-items: center;
 }
 
+.footer-social svg {
+  stroke: white;
+  transition: stroke 0.3s ease;
+}
+
+.footer-social a:hover svg {
+  stroke: var(--primary-color-light);
+}
+
 .footer-content {
   display: flex;
   justify-content: space-between;
@@ -95,6 +104,8 @@ img {
   color: white;
   width: 100%;
   max-width: var(--content-max-width);
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
 }
 
 .footer-right {
@@ -108,7 +119,7 @@ img {
 }
 
 .footer-links a:hover {
-  color: var(--accent-color-2);
+  color: var(--primary-color-light);
 }
 
 .footer-social {
