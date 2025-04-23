@@ -308,7 +308,7 @@ input:focus {
   font-size: 0.8rem;
 }
 
-@media screen and (max-width: 1000px) {
+@media (max-width: 1000px) {
   .header-content {
     position: relative;
   }

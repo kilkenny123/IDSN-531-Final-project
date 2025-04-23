@@ -84,13 +84,13 @@
   height: 70px; /* Ensures the height matches the clamped lines */
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   #ingredients-container {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media screen and (max-width: 480px) {
+@media (max-width: 480px) {
   #ingredients-container {
     grid-template-columns: repeat(1, 1fr);
   }

@@ -159,7 +159,7 @@
   border-bottom-left-radius: 0;
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   #calculator-container {
     flex-direction: column;
     max-height: none;
