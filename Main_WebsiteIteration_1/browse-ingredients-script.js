@@ -19,18 +19,64 @@ $(document).ready(function () {
         var description = $('<p class="tile-text"></p>').text(
           ingredient.description
         );
+
+        // Add substitutions list (static, always uses the original data array)
+        var substitutions = $('<div class="substitutions"></div>');
+        var substitutionsTitle = $('<p class="substitutions-title"><strong>Common Substitutions:</strong></p>');
+        var substitutionsList = $('<ul class="substitution-list"></ul>');
+
+        $.each(ingredient.substitutes.slice(0, 3), function (i, substitute) {
+          // Find the substitute ingredient from the original data array
+          var substituteIngredient = data.find((ing) => ing.id === substitute.id);
+          var substituteName = substituteIngredient ? substituteIngredient.name : "Unknown";
+
+          // Get tags for the substitute ingredient
+          var substituteTags = substituteIngredient && substituteIngredient.tags ? substituteIngredient.tags : [];
+
+          // Create the list item with the name
+          var listItem = $('<li></li>').text(substituteName);
+
+          // Map tags to their corresponding images
+          var tagIcons = {
+            Vegetarian: "vegetarian-icon.png",
+            Vegan: "vegan-icon.png",
+            "Gluten-Free": "gluten-icon.png",
+          };
+
+          // Add images for each tag
+          $.each(substituteTags, function (j, tag) {
+            if (tagIcons[tag]) {
+              // Add the gluten-icon class specifically for the "Gluten-Free" tag
+              var additionalClass = tag === "Gluten-Free" ? " gluten-icon" : "";
+              var tagImage = $('<img class="subtitution-icon' + additionalClass + '">') // Add conditional class
+                .attr("src", `${tagIcons[tag]}`)
+                .attr("alt", tag);
+              listItem.append(tagImage);
+            }
+          });
+
+          substitutionsList.append(listItem);
+        });
+
+        substitutions.append(substitutionsTitle, substitutionsList);
+
+        // Add tags for the main ingredient
         var tags = $('<div class="tags"></div>');
         $.each(ingredient.tags, function (i, tag) {
           var tagElement = $('<div class="tag"></div>').text(tag);
           tags.append(tagElement);
         });
+
+        // Add the view button
         var button = $(
           '<button class="view-btn">View Ingredient</button>'
         ).attr(
           "onclick",
           `window.location.href='calculator.html?ingredientId=${ingredient.id}'`
         );
-        tile.append(img, name, description, tags, button);
+
+        // Append all elements to the tile
+        tile.append(img, name, tags, description, substitutions, button);
         container.append(tile);
       });
     }
@@ -38,16 +84,25 @@ $(document).ready(function () {
     // Function to filter ingredients based on search, category, and tags
     function filterIngredients() {
       var filteredIngredients = ingredients.filter(function (ingredient) {
+        // Check if the ingredient matches the selected category
         var matchesCategory =
           currentCategory === "All" || ingredient.category === currentCategory;
+
+        // Check if the ingredient matches the search term
         var matchesSearch = ingredient.name
           .toLowerCase()
           .includes(currentSearchTerm);
+
+        // Check if the ingredient matches any of the selected tags
         var matchesTags =
-          selectedTags.length === 0 ||
-          selectedTags.every((tag) => ingredient.tags.includes(tag));
+          selectedTags.length === 0 || // No tags selected
+          selectedTags.some((tag) => ingredient.tags && ingredient.tags.includes(tag)); // At least one selected tag must be present
+
+        // Combine all conditions
         return matchesCategory && matchesSearch && matchesTags;
       });
+
+      // Display the filtered ingredients
       displayIngredients(filteredIngredients);
     }
 
