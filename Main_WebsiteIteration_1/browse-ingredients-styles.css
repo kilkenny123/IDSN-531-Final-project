@@ -5,7 +5,38 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
+/* Ensure the substitutions section stays within the card padding */
+.substitutions {
+  text-align: left !important; /* Force left alignment */
+  margin: 7px 15px 10px 15px; /* Adjusted margin for consistency */
+  width: 100%; /* Ensure it spans the full width of the tile */
+  padding-left: 15px; /* Add consistent padding from the left */
+  box-sizing: border-box; /* Include padding in width calculation */
+  align-self: stretch; /* Ensure it stretches to the full width of the tile */
+}
 
+.substitutions-title {
+  text-align: left !important; /* Force left alignment for the title */
+  margin: 0 0 5px 0; /* Add spacing below the title */
+  font-weight: semibold; /* Make the title bold */
+}
+
+.substitution-list {
+  text-align: left !important; /* Force left alignment for the list */
+  margin: 0 15px 0px 10px;
+  padding-left: 0; /* Remove extra padding to rely on the parent */
+  list-style-position: inside; /* Keeps bullet points inside the container */;
+}
+
+.sub-tag{
+  margin-left:5px;
+  background-color: #e0e0e0;
+  padding: 3px;
+  border-radius: 5px;
+  font-size: 0.7rem;
+  text-align: center;
+}
+/* Tile container */
 .tile {
   background-color: white;
   width: 100%;
@@ -19,9 +50,39 @@
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  padding-bottom: 20px;
+  position: relative; /* Allows precise positioning of child elements */
+}
+.subtitution-icon {
+  height: 15px;
+  margin: auto;
+  padding-left:5px;
+  display: inline-block; /* Ensure it behaves like an inline element */
+  vertical-align: middle; /* Align vertically in the center */
+}
+.ingredient-tag-filter,
+.substitution-tag-filter {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Add spacing between the icon and text */
+  padding: 5px 15px 5px 15px;;
+  cursor: pointer;
+  margin: 5px 0;
 }
 
+.tag-icon {
+  width: 20px; /* Adjust size as needed */
+  height: 20px;
+}
+
+
+.gluten-icon {
+  height: 15px;
+  margin: auto;
+  padding-left:5px;
+  display: inline-block; /* Ensure it behaves like an inline element */
+  vertical-align: middle; /* Align vertically in the center */
+}
+/* Button styling */
 .view-btn {
   cursor: pointer;
   display: flex;
@@ -37,8 +98,11 @@
   color: white;
   border: none;
   outline: none;
+  margin-top: auto; /* Pushes the button to the bottom of the tile */
+  margin-bottom: 30px; /* Ensures 30px spacing from the bottom of the tile */
 }
 
+/* Button hover effect */
 .view-btn:hover {
   background-color: var(--primary-color-dark);
   color: white;
@@ -67,21 +131,31 @@
   line-height: 100%;
   letter-spacing: 0%;
   padding: 0 30px 0 30px;
+  display: flex;
+  align-items: center; /* Align name and category text vertically */
+  gap: 5px; /* Add spacing between name and category */
 }
 
-.tile-text {
+.category-text {
   font-weight: 400;
   font-size: 20px;
+  color: #666666; /* Lighter color for the category text */
+}
+
+/* Tile text */
+.tile-text {
+  font-weight: 400;
+  font-size: 17px;
   line-height: 1.2; /* Adjust line height for better spacing */
   letter-spacing: 0%;
   text-align: center;
-  padding: 0 30px 0 30px;
+  padding: 0 15px; /* Reduced padding to match the tile */
   text-overflow: ellipsis; /* Adds "..." when text overflows */
   overflow: hidden; /* Hides overflowing text */
   display: -webkit-box; /* Enables the use of line clamping */
   -webkit-line-clamp: 3; /* Limits the text to 3 lines */
   -webkit-box-orient: vertical; /* Specifies vertical orientation for the box */
-  height: 70px; /* Ensures the height matches the clamped lines */
+  height: 60px; /* Ensures the height matches the clamped lines */
 }
 
 @media (max-width: 768px) {
