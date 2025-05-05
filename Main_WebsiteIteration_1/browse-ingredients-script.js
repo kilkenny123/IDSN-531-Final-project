@@ -1,3 +1,5 @@
+import { tagIcons } from './icons.js'; 
+
 $(document).ready(function () {
   // Get JSON File
   $.getJSON("sampledata.json", function (data) {
@@ -44,14 +46,10 @@ $(document).ready(function () {
           };
 
           // Add images for each tag
-          $.each(substituteTags, function (j, tag) {
+            $.each(substituteTags, function (j, tag) {
             if (tagIcons[tag]) {
-              // Add the gluten-icon class specifically for the "Gluten-Free" tag
-              var additionalClass = tag === "Gluten-Free" ? " gluten-icon" : "";
-              var tagImage = $('<img class="subtitution-icon' + additionalClass + '">') // Add conditional class
-                .attr("src", `${tagIcons[tag]}`)
-                .attr("alt", tag);
-              listItem.append(tagImage);
+              var tagIcon = $('<span class="substitution-icon"></span>').html(tagIcons[tag]);
+              listItem.append(tagIcon);
             }
           });
 
