@@ -263,12 +263,16 @@ button {
   gap: 10px;
   flex-wrap: wrap;
 }
-.subtitution-icon {
-  height: 15px;
+.subtitution-icon{
   margin: auto;
   padding-left:5px;
   display: inline-block; /* Ensure it behaves like an inline element */
   vertical-align: middle; /* Align vertically in the center */
+}
+.substitution-icon svg {
+  height: 15px; /* Set the height */
+  width: auto;  /* Maintain aspect ratio */
+  display: inline-block; /* Ensure proper inline behavior */
 }
 .ingredient-tag-filter,
 .substitution-tag-filter {
