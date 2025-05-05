@@ -77,17 +77,8 @@ $(document).ready(function () {
     }
 
     /*
-        SEARCH HANDLING
-    */
-
-    // Function to update search input
-    $("#search-input").on("input", function () {
-      searchInput = $(this).val().toLowerCase();
-    });
-
-    /*
       CATEGORY FILTER HANDLING
-    */
+      */
 
     // Function to get unique categories from ingredients
     function getUniqueCategories() {
@@ -123,12 +114,11 @@ $(document).ready(function () {
     $(".category-filter").on("click", function () {
       $(".category-filter").removeClass("active");
       $(this).addClass("active");
-      selectedCategory = $(this).text().toLowerCase();
     });
 
     /*
       INGREDIENT TAG FILTER HANDLING
-    */
+      */
 
     // Function to get unique tags from ingredients
     function getUniqueIngredientTags() {
@@ -165,16 +155,11 @@ $(document).ready(function () {
     // Handle tag filter click
     $(".ingredient-tag-filter").on("click", function () {
       $(this).toggleClass("active");
-      var selectedTags = [];
-      $(".ingredient-tag-filter.active").each(function () {
-        selectedTags.push($(this).text());
-      });
-      ingredientTagFilters = selectedTags;
     });
 
     /*
       SUBSTITUTION TAG FILTER HANDLING
-    */
+      */
 
     // Function to get unique tags from substitutions
     function getUniqueSubstitutionTags() {
@@ -221,11 +206,6 @@ $(document).ready(function () {
     // Handle tag filter click
     $(".substitution-tag-filter").on("click", function () {
       $(this).toggleClass("active");
-      var selectedTags = [];
-      $(".substitution-tag-filter.active").each(function () {
-        selectedTags.push($(this).text());
-      });
-      substitutionTagFilters = selectedTags;
     });
   });
 });

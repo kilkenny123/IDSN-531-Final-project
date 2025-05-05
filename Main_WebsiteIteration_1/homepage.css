@@ -173,7 +173,7 @@ footer {
     flex-direction: column;
     gap: 10px;
   }
-  .search-bar input {
+  .search-bar-input {
     width: 100%;
   }
   .calculator-section {

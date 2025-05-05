@@ -25,11 +25,11 @@
   text-align: left !important; /* Force left alignment for the list */
   margin: 0 15px 0px 10px;
   padding-left: 0; /* Remove extra padding to rely on the parent */
-  list-style-position: inside; /* Keeps bullet points inside the container */;
+  list-style-position: inside; /* Keeps bullet points inside the container */
 }
 
-.sub-tag{
-  margin-left:5px;
+.sub-tag {
+  margin-left: 5px;
   background-color: #e0e0e0;
   padding: 3px;
   border-radius: 5px;
@@ -86,6 +86,12 @@
   letter-spacing: 0%;
   vertical-align: middle;
   color: #333333;
+}
+
+.no-results {
+  grid-column-start: 1;
+  grid-column-end: none;
+  text-align: center;
 }
 
 .ing-img {

@@ -17,7 +17,7 @@
     />
     <!---Stylesheets--->
     <link rel="stylesheet" href="easypantry.css" />
-    <link rel="stylesheet" href="hompage.css" />
+    <link rel="stylesheet" href="homepage.css" />
     <!-- Bring in jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!---Header Script--->
@@ -42,14 +42,14 @@
             <h1 class="page-title">
               Cook with what you've got - Smart ingredient swaps in seconds
             </h1>
-            <div class="search-bar">
+            <form class="search-bar" id="search-bar-form">
               <input
                 type="text"
-                id="search-bar input"
+                id="search-bar-input"
                 placeholder="Search for ingredients..."
               />
               <button class="button-style">Search</button>
-            </div>
+            </form>
           </div>
           <div class="hero-image">
             <img src="EP_Heroimg.png" alt="Cooking illustration" />
@@ -345,23 +345,34 @@
 
     <script>
       $(document).ready(function () {
+        // Handle search bar submission
+        $("#search-bar-form").on("submit", function (event) {
+          event.preventDefault(); // Prevent the default form submission
+          const query = $("#search-bar-input").val();
+          if (query) {
+            window.location.href = `BrowseIngredients.html?search=${encodeURIComponent(
+              query
+            )}`;
+          }
+        });
+
         function revealOnScroll() {
-          $('.reveal').each(function () {
+          $(".reveal").each(function () {
             const windowHeight = $(window).height();
             const elementTop = $(this).offset().top;
             const scrollTop = $(window).scrollTop();
-    
-            if (elementTop < scrollTop + windowHeight - 50) { // adjust offset if needed
-              $(this).addClass('active');
+
+            if (elementTop < scrollTop + windowHeight - 50) {
+              // adjust offset if needed
+              $(this).addClass("active");
             }
           });
         }
-    
+
         // Run on page load and on scroll
         revealOnScroll();
-        $(window).on('scroll', revealOnScroll);
+        $(window).on("scroll", revealOnScroll);
       });
     </script>
-    
   </body>
 </html>
