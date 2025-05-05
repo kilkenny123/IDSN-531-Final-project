@@ -9,7 +9,7 @@ $(document).ready(function () {
     var container = $("#ingredients-container");
     var currentCategory = params.get("category") || "All";
     var currentSearchTerm = params.get("search") || "";
-    var selectedTags = params.get("tags") || [];
+    var selectedTags = params.get("tags").split(",") || [];
 
     // Function to display ingredients
     function displayIngredients(ingredients) {
@@ -103,12 +103,12 @@ $(document).ready(function () {
           .toLowerCase()
           .includes(currentSearchTerm);
 
-        // Check if the ingredient matches any of the selected tags
+        // Check if the ingredient matches all of the selected tags
         var matchesTags =
-          selectedTags.length === 0 || // No tags selected
-          selectedTags.some(
+          selectedTags.length === 0 ||
+          selectedTags.every(
             (tag) => ingredient.tags && ingredient.tags.includes(tag)
-          ); // At least one selected tag must be present
+          ); // All selected tags must be present
 
         // Combine all conditions
         return matchesCategory && matchesSearch && matchesTags;

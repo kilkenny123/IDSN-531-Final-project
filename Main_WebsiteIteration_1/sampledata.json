@@ -179,7 +179,7 @@
     "name": "Eggs",
     "image": "https://cdn.britannica.com/94/151894-050-F72A5317/Brown-eggs.jpg",
     "description": "A versatile ingredient in cooking, essential for binding and rising.",
-    "tags": ["Vegetarian"],
+    "tags": ["Vegetarian", "High-Protein"],
     "category": "Dairy",
     "substitutes": [
       {
@@ -324,7 +324,7 @@
     "name": "Broccoli",
     "image": "https://snaped.fns.usda.gov/sites/default/files/styles/crop_ratio_7_5/public/seasonal-produce/2018-05/broccoli.jpg.webp?itok=9hD8BBER",
     "description": "A nutritious vegetable often used in cooking and salads.",
-    "tags": ["Vegan"],
+    "tags": ["Vegan", "Dairy-Free"],
     "category": "Produce",
     "substitutes": [
       {
@@ -349,7 +349,7 @@
     "name": "Brussels Sprouts",
     "image": "https://tinandthyme.uk/wp-content/uploads/2023/01/Cooked-Brussels-Sprouts.jpg",
     "description": "Small, cabbage-like vegetables often roasted or used in stir-fries.",
-    "tags": ["Vegan"],
+    "tags": ["Vegan", "Dairy-Free"],
     "category": "Produce",
     "substitutes": [
       {
@@ -374,7 +374,7 @@
     "name": "Cabbage",
     "image": "https://d3awvtnmmsvyot.cloudfront.net/api/file/GGosbWO9SYyGxvDaciZf/convert?fit=max&w=570&cache=true",
     "description": "A leafy vegetable often used in slaws and stir-fries.",
-    "tags": ["Vegan"],
+    "tags": ["Vegan", "Dairy-Free"],
     "category": "Produce",
     "substitutes": [
       {
@@ -399,7 +399,7 @@
     "name": "Cauliflower",
     "image": "https://www.producemarketguide.com/media/user_RZKVrm5KkV/22522/cauliflower_commodity-page.png",
     "description": "A versatile vegetable used in a variety of dishes, often as a substitute for grains.",
-    "tags": ["Vegan"],
+    "tags": ["Vegan", "Dairy-Free"],
     "category": "Produce",
     "substitutes": [
       {
@@ -424,7 +424,7 @@
     "name": "Carrots",
     "image": "https://healthyschoolrecipes.com/wp-content/uploads/2018/11/carrots.jpg",
     "description": "A crunchy root vegetable used in salads, stir-fries, and many dishes.",
-    "tags": ["Vegan"],
+    "tags": ["Vegan", "Dairy-Free"],
     "category": "Produce",
     "substitutes": [
       {
@@ -449,7 +449,7 @@
     "name": "Shallots",
     "image": "https://www.savorysimple.net/what-are-shallots/what-are-shallots-035/",
     "description": "A milder, sweeter type of onion used in many dishes.",
-    "tags": ["Vegan"],
+    "tags": ["Vegan", "Dairy-Free"],
     "category": "Produce",
     "substitutes": [
       {
@@ -474,7 +474,7 @@
     "name": "Bok Choy",
     "image": "https://downshiftology.com/wp-content/uploads/2019/03/Garlic-Ginger-Bok-Choy-main-500x500.jpg",
     "description": "A leafy green vegetable often used in Asian dishes.",
-    "tags": ["Vegan"],
+    "tags": ["Vegan", "Dairy-Free"],
     "category": "Produce",
     "substitutes": [
       {
@@ -499,7 +499,7 @@
     "name": "Kale",
     "image": "https://www.highmowingseeds.com/media/catalog/product/cache/95cbc1bb565f689da055dd93b41e1c28/2/5/2522.jpg",
     "description": "A dark, leafy green with a slightly bitter taste, often used in salads and soups.",
-    "tags": ["Vegan"],
+    "tags": ["Vegan", "Dairy-Free"],
     "category": "Produce",
     "substitutes": [
       {
@@ -524,7 +524,7 @@
     "name": "Butter",
     "image": "https://d28ku8nzmkcjr6.cloudfront.net/cache/81/61/8161d8f82f4df5bcdb1244468d558a49.webp",
     "description": "A dairy product made from churning cream, used in cooking and baking.",
-    "tags": ["Gluten-Free"],
+    "tags": ["Gluten-Free", "Low-Carb"],
     "category": "Dairy",
     "substitutes": [
       {
