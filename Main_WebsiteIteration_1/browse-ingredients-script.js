@@ -38,13 +38,6 @@ $(document).ready(function () {
           // Create the list item with the name
           var listItem = $('<li></li>').text(substituteName);
 
-          // Map tags to their corresponding images
-          var tagIcons = {
-            Vegetarian: "vegetarian-icon.png",
-            Vegan: "vegan-icon.png",
-            "Gluten-Free": "gluten-icon.png",
-          };
-
           // Add images for each tag
             $.each(substituteTags, function (j, tag) {
             if (tagIcons[tag]) {
