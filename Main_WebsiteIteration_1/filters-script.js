@@ -1,3 +1,6 @@
+
+import { tagIcons } from './icons.js'; // Import the new tag icons
+
 const searchTemplate = document.createElement("template");
 
 searchTemplate.innerHTML = `
@@ -147,27 +150,14 @@ $(document).ready(function () {
     function displayIngredientTagFilters(tags) {
       ingredientTagFiltersContainer.empty();
 
-      var tagIcons = {
-        "Gluten-Free": "gluten-icon.png",
-        Vegetarian: "vegetarian-icon.png",
-        Vegan: "vegan-icon.png",
-      };
-
       $.each(tags, function (index, tag) {
         var tagFilter = $('<div class="ingredient-tag-filter"></div>');
 
         // Check if the tag has a mapped icon
         if (tagIcons[tag]) {
-          var tagText = $('<span class="tag-text"></span>').text(tag);
-          tagFilter.append(tagText);
-          
-          var tagImage = $('<img class="tag-icon">')
-            .attr("src", `${tagIcons[tag]}`)
-            .attr("alt", tag);
-          tagFilter.append(tagImage);
+          var tagIcon = $('<span class="tag-icon"></span>').html(tagIcons[tag]); // Use the imported SVG
+          tagFilter.append(tagIcon);
         }
-
-
 
         ingredientTagFiltersContainer.append(tagFilter);
       });
@@ -218,21 +208,12 @@ $(document).ready(function () {
     function displaySubstitutionTagFilters(tags) {
       substitutionTagFiltersContainer.empty();
 
-      var tagIcons = {
-        "Gluten-Free": "gluten-icon.png",
-        Vegetarian: "vegetarian-icon.png",
-        Vegan: "vegan-icon.png",
-      };
-
       $.each(tags, function (index, tag) {
         var tagFilter = $('<div class="substitution-tag-filter"></div>');
 
-        // Check if the tag has a mapped icon
-        if (tagIcons[tag]) {
-          var tagImage = $('<img class="tag-icon">')
-            .attr("src", `${tagIcons[tag]}`) 
-            .attr("alt", tag);
-          tagFilter.append(tagImage);
+    if (tagIcons[tag]) {
+          var tagIcon = $('<span class="tag-icon"></span>').html(tagIcons[tag]); // Use the imported SVG
+          tagFilter.append(tagIcon);
         }
 
         var tagText = $('<span class="tag-text"></span>').text(tag);
