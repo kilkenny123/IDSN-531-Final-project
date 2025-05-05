@@ -518,5 +518,25 @@
         "xing": 1
       }
     ]
+  },
+  {
+    "id": 22,
+    "name": "Butter",
+    "image": "https://d28ku8nzmkcjr6.cloudfront.net/cache/81/61/8161d8f82f4df5bcdb1244468d558a49.webp",
+    "description": "A dairy product made from churning cream, used in cooking and baking.",
+    "tags": ["Gluten-Free"],
+    "category": "Dairy",
+    "substitutes": [
+      {
+        "id": 7,
+        "ratio": "1:1",
+        "xing": 1
+      },
+      {
+        "id": 10,
+        "ratio": "1:1",
+        "xing": 1
+      }
+    ]
   }
 ]

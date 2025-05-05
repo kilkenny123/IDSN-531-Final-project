@@ -81,6 +81,8 @@ section {
   background-color: #ffffff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   font-family: "Quicksand", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 .card p {
   font-size: 14px;
@@ -92,6 +94,10 @@ section {
   border-radius: 50%;
   background: #f7e785;
   padding: 5px;
+}
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 .sub-list {
   padding: 0;

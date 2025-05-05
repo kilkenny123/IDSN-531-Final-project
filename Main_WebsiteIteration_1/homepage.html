@@ -58,7 +58,7 @@
 
         <h2 class="section-title">Popular Substitutions</h2>
         <section class="quick-picks reveal">
-          <div class="card">
+          <div class="card" id="egg-card">
             <img
               src="https://img.icons8.com/emoji/48/egg-emoji.png"
               alt="Egg Icon"
@@ -69,7 +69,7 @@
               <li>Flaxseed Meal</li>
             </ul>
           </div>
-          <div class="card">
+          <div class="card" id="milk-card">
             <img
               src="https://img.icons8.com/fluency/48/milk-bottle.png"
               alt="Milk Icon"
@@ -80,18 +80,18 @@
               <li>Almond Milk</li>
             </ul>
           </div>
-          <div class="card">
+          <div class="card" id="cornmeal-card">
             <img
               src="https://img.icons8.com/color/48/corn.png"
-              alt="Cornstarch Icon"
+              alt="cornmeal Icon"
             />
-            <strong>Cornstarch</strong>
+            <strong>Cornmeal</strong>
             <ul class="sub-list">
               <li>Arrowroot Powder</li>
               <li>Flaxseed Meal</li>
             </ul>
           </div>
-          <div class="card">
+          <div class="card" id="butter-card">
             <img
               src="https://img.icons8.com/color/48/butter.png"
               alt="Butter Icon"
@@ -354,6 +354,20 @@
               query
             )}`;
           }
+        });
+
+        // Handle card clicks
+        $("#egg-card").on("click", function () {
+          window.location.href = "calculator.html?ingredientId=8";
+        });
+        $("#milk-card").on("click", function () {
+          window.location.href = "calculator.html?ingredientId=12";
+        });
+        $("#cornmeal-card").on("click", function () {
+          window.location.href = "calculator.html?ingredientId=3";
+        });
+        $("#butter-card").on("click", function () {
+          window.location.href = "calculator.html?ingredientId=22";
         });
 
         function revealOnScroll() {
