@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Rice",
-    "image": "https://images.unsplash.com/photo-1651793371427-ad065df0d208?q=80&w=2873&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "image": "https://jow.com/_next/image?url=https%3A%2F%2Fstatic.jow.fr%2Fingredients%2FbYtBTuGC5nDMsw.jpg.webp&w=256&q=75",
     "description": "A staple grain used in a variety of dishes.",
     "tags": ["Vegan", "Gluten-Free"],
     "category": "Grains",
@@ -27,7 +27,7 @@
   {
     "id": 2,
     "name": "Buckwheat",
-    "image": "https://images.unsplash.com/photo-1613758235306-69cc0a3f614d?q=80&w=2713&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "image": "https://bigoven-res.cloudinary.com/image/upload/f_auto,q_auto/t_recipe-256/buckwheat-porridge-3032db590013433b0c1884d0.jpg",
     "description": "A nutritious grain-like seed, often used in gluten-free recipes.",
     "tags": ["Vegan", "Gluten-Free"],
     "category": "Grains",
@@ -52,7 +52,7 @@
   {
     "id": 3,
     "name": "Cornmeal",
-    "image": "https://shop.honeyville.com/media/catalog/product/cache/093c956ac64137d9dc9bc83b50a1f5b9/y/e/yellow-corn-meal-honeyville-24.jpg",
+    "image": "https://ip.prod.freshop.retail.ncrcloud.com/resize?url=https://images.freshop.ncrcloud.com/00030000030509/c12b8f6d857f0d040e8c35e24adac00a_large.png&width=256&type=webp&quality=80",
     "description": "A coarsely ground flour made from dried corn, commonly used for baking.",
     "tags": ["Vegan", "Gluten-Free"],
     "category": "Grains",
@@ -77,7 +77,7 @@
   {
     "id": 4,
     "name": "Millet",
-    "image": "https://arrowheadmills.com/wp-content/uploads/2022/09/puffed-millet-9.jpg",
+    "image": "https://www.tradeindia.com/_next/image/?url=https%3A%2F%2Ftiimg.tistatic.com%2Ffp%2F1%2F007%2F525%2Fhigh-protein-rich-and-nutrients-rich-organic-foxtail-millet-without-added-colors-595.jpg&w=256&q=75",
     "description": "A small, round grain commonly used in gluten-free dishes.",
     "tags": ["Vegan", "Gluten-Free"],
     "category": "Grains",
@@ -102,7 +102,7 @@
   {
     "id": 5,
     "name": "Oats",
-    "image": "https://media.post.rvohealth.io/wp-content/uploads/2020/03/oats-oatmeal-732x549-thumbnail.jpg",
+    "image": "https://jow.com/_next/image?url=https%3A%2F%2Fstatic.jow.fr%2Fingredients%2F5cFp2vXk5N1n7g.png.webp&w=256&q=75",
     "description": "A versatile whole grain used in baking, breakfast foods, and more.",
     "tags": ["Vegan", "Gluten-Free"],
     "category": "Grains",
@@ -127,7 +127,7 @@
   {
     "id": 6,
     "name": "Quinoa",
-    "image": "https://cdn.loveandlemons.com/wp-content/uploads/2019/09/quinoa.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-ZBaj2OYf46nUzkWp2AuSpCa-WCuW7tYb3w&s",
     "description": "A high-protein, gluten-free grain often used as a substitute for rice.",
     "tags": ["Vegan", "Gluten-Free"],
     "category": "Grains",
@@ -152,7 +152,7 @@
   {
     "id": 7,
     "name": "Buttermilk",
-    "image": "https://www.ambitiouskitchen.com/wp-content/uploads/2014/09/How-to-Make-Buttermilk-4.jpg",
+    "image": "https://ipcdn.freshop.com/resize?url=https://images.freshop.com/00041231001022/3ba3513ede5f2675e8b18647b0930202_large.png&width=256&type=webp&quality=80",
     "description": "A dairy product with a tangy flavor, often used in baking.",
     "tags": ["Vegetarian"],
     "category": "Dairy",
@@ -177,7 +177,7 @@
   {
     "id": 8,
     "name": "Eggs",
-    "image": "https://cdn.britannica.com/94/151894-050-F72A5317/Brown-eggs.jpg",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVolgqhQi2yMHACJoBrRX1SXT1DgbdM1Mz2g&s",
     "description": "A versatile ingredient in cooking, essential for binding and rising.",
     "tags": ["Vegetarian", "High-Protein"],
     "category": "Dairy",
@@ -202,7 +202,7 @@
   {
     "id": 9,
     "name": "Half-and-Half",
-    "image": "https://www.aedairy.com/wp-content/uploads/2022/09/HALFHALF-PINT-product-detail-hero-535px.png",
+    "image": "https://images.media.gianteagle.com/00034500631921-435a444f-541d-4c60-83b2-7d28f12156fa.jpg?auto=format%2Ccompress&fill=solid&fit=fill&h=256&q=92&trim=auto&trim-md=0&w=256",
     "description": "A mixture of half milk and half cream, used in coffee or cooking.",
     "tags": ["Vegetarian"],
     "category": "Dairy",
@@ -227,7 +227,7 @@
   {
     "id": 10,
     "name": "Heavy Cream",
-    "image": "https://horizon.com/wp-content/uploads/horizon-organic-heavy-whipping-cream-v2.png",
+    "image": "https://ip.prod.freshop.retail.ncrcloud.com/resize?url=https://images.freshop.ncrcloud.com/00742365216855/0a738abf891feeb0cf0982c3796eba7f_large.png&width=256&type=webp&quality=80",
     "description": "A rich dairy product often used for cooking and desserts.",
     "tags": ["Vegetarian"],
     "category": "Dairy",
@@ -252,7 +252,7 @@
   {
     "id": 11,
     "name": "Sour Cream",
-    "image": "https://www.southernliving.com/thmb/Av2kYK_qtLG68Kjsz658t1L74v8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-497100969-2000-bcc4707e1b0a4003a1bff82a848b46d7.jpg",
+    "image": "https://ip.prod.freshop.retail.ncrcloud.com/resize?url=https://images.freshop.ncrcloud.com/00073420000110/cd05bdc792bb42e83cecb010e157a190_large.png&width=256&type=webp&quality=80",
     "description": "A creamy, tangy dairy product often used in dips and as a topping.",
     "tags": ["Vegetarian"],
     "category": "Dairy",
@@ -272,7 +272,7 @@
   {
     "id": 12,
     "name": "Whole Milk",
-    "image": "https://horizon.com/wp-content/uploads/horizon-organic-whole-milk-lockup-v3-.png",
+    "image": "https://ipcdn.freshop.com/resize?url=https://images.freshop.com/00070253651007/a455d0df8da806a119e0de3244c11a9b_large.png&width=256&type=jpeg&quality=90",
     "description": "Full-fat milk, often used in baking and cooking.",
     "tags": ["Vegetarian"],
     "category": "Dairy",
@@ -297,7 +297,7 @@
   {
     "id": 13,
     "name": "Yogurt",
-    "image": "https://images.getrecipekit.com/20240109191538-homemade-yogurt.jpg?aspect_ratio=4:3&quality=90&",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeYnX6bA14Wz09iz32ZktIdBEqpVC9yFzatQ&s",
     "description": "A fermented dairy product used in cooking or eaten on its own.",
     "tags": ["Vegetarian"],
     "category": "Dairy",
@@ -322,7 +322,7 @@
   {
     "id": 14,
     "name": "Broccoli",
-    "image": "https://snaped.fns.usda.gov/sites/default/files/styles/crop_ratio_7_5/public/seasonal-produce/2018-05/broccoli.jpg.webp?itok=9hD8BBER",
+    "image": "https://ip.prod.freshop.retail.ncrcloud.com/resize?url=https://images.freshop.ncrcloud.com/3000230/28b4a678e83ec05450cd559941930c53_large.png&width=256&type=webp&quality=80",
     "description": "A nutritious vegetable often used in cooking and salads.",
     "tags": ["Vegan", "Dairy-Free"],
     "category": "Produce",
@@ -347,7 +347,7 @@
   {
     "id": 15,
     "name": "Brussels Sprouts",
-    "image": "https://tinandthyme.uk/wp-content/uploads/2023/01/Cooked-Brussels-Sprouts.jpg",
+    "image": "https://ip.prod.freshop.retail.ncrcloud.com/resize?url=https://images.freshop.ncrcloud.com/2310624/ca50d761fbf2e618ae4d43cf64d13c73_large.png&width=256&type=webp&quality=80",
     "description": "Small, cabbage-like vegetables often roasted or used in stir-fries.",
     "tags": ["Vegan", "Dairy-Free"],
     "category": "Produce",
@@ -372,7 +372,7 @@
   {
     "id": 16,
     "name": "Cabbage",
-    "image": "https://d3awvtnmmsvyot.cloudfront.net/api/file/GGosbWO9SYyGxvDaciZf/convert?fit=max&w=570&cache=true",
+    "image": "https://jow.fr/_next/image?url=https%3A%2F%2Fstatic.jow.fr%2Fingredients%2Fhp2oZogYp9ta7Q.png.webp&w=256&q=75",
     "description": "A leafy vegetable often used in slaws and stir-fries.",
     "tags": ["Vegan", "Dairy-Free"],
     "category": "Produce",
@@ -397,7 +397,7 @@
   {
     "id": 17,
     "name": "Cauliflower",
-    "image": "https://www.producemarketguide.com/media/user_RZKVrm5KkV/22522/cauliflower_commodity-page.png",
+    "image": "https://ipcdn.freshop.com/resize?url=https://images.freshop.com/78522/0b4f73a07c6757d9f00a8f798e87a242_large.png&width=256&type=webp&quality=80",
     "description": "A versatile vegetable used in a variety of dishes, often as a substitute for grains.",
     "tags": ["Vegan", "Dairy-Free"],
     "category": "Produce",
@@ -422,7 +422,7 @@
   {
     "id": 18,
     "name": "Carrots",
-    "image": "https://healthyschoolrecipes.com/wp-content/uploads/2018/11/carrots.jpg",
+    "image": "https://images.stockcake.com/public/1/a/c/1acfc84c-5a50-4c2e-986b-1a09ad53715b_medium/fresh-carrot-bunch-stockcake.jpg",
     "description": "A crunchy root vegetable used in salads, stir-fries, and many dishes.",
     "tags": ["Vegan", "Dairy-Free"],
     "category": "Produce",
@@ -447,7 +447,7 @@
   {
     "id": 19,
     "name": "Shallots",
-    "image": "https://www.savorysimple.net/what-are-shallots/what-are-shallots-035/",
+    "image": "https://jow.com/_next/image?url=https%3A%2F%2Fstatic.jow.fr%2Fingredients%2FtxHTcHrfHiLusA.jpg.webp&w=256&q=75",
     "description": "A milder, sweeter type of onion used in many dishes.",
     "tags": ["Vegan", "Dairy-Free"],
     "category": "Produce",
@@ -472,7 +472,7 @@
   {
     "id": 20,
     "name": "Bok Choy",
-    "image": "https://downshiftology.com/wp-content/uploads/2019/03/Garlic-Ginger-Bok-Choy-main-500x500.jpg",
+    "image": "https://dtgxwmigmg3gc.cloudfront.net/imagery/assets/derivations/icon/256/256/true/eyJpZCI6Ijk5YWQ5OTBmMjU2ZjIyZTU2MmMzYzJkNGU0NThhMTc2Iiwic3RvcmFnZSI6InB1YmxpY19zdG9yZSJ9?signature=41c537db321743fa0a2310709b3516f3a02c079e932de062b23584c9f4ce29bb",
     "description": "A leafy green vegetable often used in Asian dishes.",
     "tags": ["Vegan", "Dairy-Free"],
     "category": "Produce",
@@ -497,7 +497,7 @@
   {
     "id": 21,
     "name": "Kale",
-    "image": "https://www.highmowingseeds.com/media/catalog/product/cache/95cbc1bb565f689da055dd93b41e1c28/2/5/2522.jpg",
+    "image": "https://images.stockcake.com/public/8/8/e/88e8033d-b525-4eb5-ab15-25c0178ed22b_medium/fresh-kale-bunch-stockcake.jpg",
     "description": "A dark, leafy green with a slightly bitter taste, often used in salads and soups.",
     "tags": ["Vegan", "Dairy-Free"],
     "category": "Produce",
