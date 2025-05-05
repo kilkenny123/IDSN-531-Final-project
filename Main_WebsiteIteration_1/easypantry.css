@@ -252,7 +252,35 @@ button {
   gap: 10px;
   flex-wrap: wrap;
 }
+.subtitution-icon {
+  height: 15px;
+  margin: auto;
+  padding-left:5px;
+  display: inline-block; /* Ensure it behaves like an inline element */
+  vertical-align: middle; /* Align vertically in the center */
+}
+.ingredient-tag-filter,
+.substitution-tag-filter {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Add spacing between the icon and text */
+  padding: 5px 15px 5px 15px;;
+  cursor: pointer;
+  margin: 5px 0;
+}
 
+.tag-icon {
+  width: 20px; /* Adjust size as needed */
+  height: 20px;
+}
+
+.gluten-icon {
+  height: 15px;
+  margin: auto;
+  padding-left:5px;
+  display: inline-block; /* Ensure it behaves like an inline element */
+  vertical-align: middle; /* Align vertically in the center */
+}
 .ingredient-tag-filter,
 .substitution-tag-filter {
   padding: 5px 10px;
