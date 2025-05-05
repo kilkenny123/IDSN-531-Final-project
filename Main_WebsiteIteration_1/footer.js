@@ -3,7 +3,7 @@ const footerTemplate = document.createElement("template");
 footerTemplate.innerHTML = `
     <div class="footer">
         <div class="footer-content">
-          <img src="logo-white.png" alt="Logo" id="logo"></img>
+          <img src="logo_green.png" alt="Logo" id="logo"></img>
           <div class="footer-right">
             <div class="footer-links">
               <a href="contact.html">Contact Us</a>
