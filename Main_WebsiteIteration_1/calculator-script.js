@@ -271,7 +271,7 @@ $(document).ready(function () {
 
     // Function to update the search params on filter input
     function updateURL() {
-      var newURL = `?search=${searchInput}&category=${selectedCategory}`;
+      var newURL = `?ingredientId=${ingredientId}&search=${searchInput}&category=${selectedCategory}`;
       window.history.pushState({ path: newURL }, "", newURL);
     }
 
