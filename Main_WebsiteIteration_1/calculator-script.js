@@ -1,6 +1,8 @@
 $(document).ready(function () {
   const urlParams = new URLSearchParams(window.location.search);
   const ingredientId = urlParams.get("ingredientId");
+  var searchInput = urlParams.get("search") || "";
+  var selectedCategory = urlParams.get("category") || "all";
 
   if (!ingredientId) {
     window.location.href = "calculator.html?ingredientId=1";
@@ -25,6 +27,10 @@ $(document).ready(function () {
             "onclick",
             "window.location.href='calculator.html?ingredientId=" +
               ingredient.id +
+              "&search=" +
+              searchInput +
+              "&category=" +
+              selectedCategory +
               "'"
           );
 
@@ -263,26 +269,51 @@ $(document).ready(function () {
       HANDLE FILTER INPUTS
     */
 
+    // Function to update the search params on filter input
+    function updateURL() {
+      var newURL = `?search=${searchInput}&category=${selectedCategory}`;
+      window.history.pushState({ path: newURL }, "", newURL);
+    }
+
+    // Initially set the search input and category filter based on URL params
+    $("#search-input").val(searchInput);
+    $(".category-filter").removeClass("active");
+    if (selectedCategory) {
+      $(".category-filter").each(function () {
+        if ($(this).text().toLowerCase() === selectedCategory) {
+          $(this).addClass("active");
+        }
+      });
+    }
+
+    // Function to filter ingredients based on search input and category
+    function filterIngredients() {
+      var filteredIngredients = ingredients.filter(function (ingredient) {
+        var matchesSearch = ingredient.name.toLowerCase().includes(searchInput);
+        var matchesCategory =
+          selectedCategory === "all" ||
+          ingredient.category.toLowerCase() === selectedCategory;
+        return matchesSearch && matchesCategory;
+      });
+      addInputIngredientOptions(filteredIngredients);
+    }
+
+    filterIngredients();
+
     // Function to handle search input
     $("#search-input").on("input", function () {
       searchInput = $(this).val().toLowerCase();
-      var filteredIngredients = ingredients.filter(function (ingredient) {
-        return ingredient.name.toLowerCase().includes(searchInput);
-      });
-      addInputIngredientOptions(filteredIngredients);
+      updateURL();
+      filterIngredients();
     });
 
     // Function to handle category filter
     $(".category-filter").on("click", function () {
       selectedCategory = $(this).text().toLowerCase();
-
-      var filteredIngredients = ingredients.filter(function (ingredient) {
-        if (selectedCategory === "all") {
-          return true;
-        }
-        return ingredient.category.toLowerCase() === selectedCategory;
-      });
-      addInputIngredientOptions(filteredIngredients);
+      $(".category-filter").removeClass("active");
+      $(this).addClass("active");
+      updateURL();
+      filterIngredients();
     });
 
     // Function to handle tag filters
