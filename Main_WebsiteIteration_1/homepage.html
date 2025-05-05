@@ -57,7 +57,7 @@
         </section>
 
         <h2 class="section-title">Popular Substitutions</h2>
-        <section class="quick-picks">
+        <section class="quick-picks reveal">
           <div class="card">
             <img
               src="https://img.icons8.com/emoji/48/egg-emoji.png"
@@ -108,8 +108,8 @@
           <button class="browse button-style">Browse All Ingredients →</button>
         </a>
 
-        <h2 class="section-title">Browse by Category</h2>
-        <section class="categories">
+        <h2 class="section-title">Browse by Diet</h2>
+        <section class="categories reveal">
           <button class="category">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -261,7 +261,7 @@
           </button>
         </section>
 
-        <section class="calculator-section">
+        <section class="calculator-section reveal">
           <div>
             <h3>Try our Substitution Calculator</h3>
             <br />
@@ -276,7 +276,7 @@
         </section>
 
         <!-- How It Works Section -->
-        <section class="how-it-works">
+        <section class="how-it-works reveal">
           <h2 class="section-title">How It Works</h2>
           <section class="steps">
             <div class="step">
@@ -316,7 +316,7 @@
         </section>
 
         <!-- Why Easy Pantry Section -->
-        <section class="why-easy-pantry">
+        <section class="why-easy-pantry reveal">
           <h2 class="section-title">Why Easy Pantry?</h2>
           <section class="quick-picks">
             <ul>
@@ -342,5 +342,26 @@
       </div>
     </div>
     <div id="footer"></div>
+
+    <script>
+      $(document).ready(function () {
+        function revealOnScroll() {
+          $('.reveal').each(function () {
+            const windowHeight = $(window).height();
+            const elementTop = $(this).offset().top;
+            const scrollTop = $(window).scrollTop();
+    
+            if (elementTop < scrollTop + windowHeight - 50) { // adjust offset if needed
+              $(this).addClass('active');
+            }
+          });
+        }
+    
+        // Run on page load and on scroll
+        revealOnScroll();
+        $(window).on('scroll', revealOnScroll);
+      });
+    </script>
+    
   </body>
 </html>
