@@ -9,7 +9,7 @@ $(document).ready(function () {
     var container = $("#ingredients-container");
     var currentCategory = params.get("category") || "All";
     var currentSearchTerm = params.get("search") || "";
-    var selectedTags = params.get("tags").split(",") || [];
+    var selectedTags = params.get("tags") ? params.get("tags").split(",") : [];
 
     // Function to display ingredients
     function displayIngredients(ingredients) {
