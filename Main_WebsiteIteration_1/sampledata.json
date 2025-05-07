@@ -4,7 +4,7 @@
     "name": "Rice",
     "image": "https://jow.com/_next/image?url=https%3A%2F%2Fstatic.jow.fr%2Fingredients%2FbYtBTuGC5nDMsw.jpg.webp&w=256&q=75",
     "description": "A staple grain used in a variety of dishes.",
-    "tags": ["Vegan", "Gluten-Free"],
+    "tags": ["Vegan", "Gluten-Free", "Vegetarian"],
     "category": "Grains",
     "substitutes": [
       {
@@ -29,7 +29,7 @@
     "name": "Buckwheat",
     "image": "https://bigoven-res.cloudinary.com/image/upload/f_auto,q_auto/t_recipe-256/buckwheat-porridge-3032db590013433b0c1884d0.jpg",
     "description": "A nutritious grain-like seed, often used in gluten-free recipes.",
-    "tags": ["Vegan", "Gluten-Free"],
+    "tags": ["Vegan", "Gluten-Free", "Vegetarian"],
     "category": "Grains",
     "substitutes": [
       {
@@ -54,7 +54,7 @@
     "name": "Cornmeal",
     "image": "https://ip.prod.freshop.retail.ncrcloud.com/resize?url=https://images.freshop.ncrcloud.com/00030000030509/c12b8f6d857f0d040e8c35e24adac00a_large.png&width=256&type=webp&quality=80",
     "description": "A coarsely ground flour made from dried corn, commonly used for baking.",
-    "tags": ["Vegan", "Gluten-Free"],
+    "tags": ["Vegan", "Gluten-Free", "Vegetarian"],
     "category": "Grains",
     "substitutes": [
       {
@@ -79,7 +79,7 @@
     "name": "Millet",
     "image": "https://www.tradeindia.com/_next/image/?url=https%3A%2F%2Ftiimg.tistatic.com%2Ffp%2F1%2F007%2F525%2Fhigh-protein-rich-and-nutrients-rich-organic-foxtail-millet-without-added-colors-595.jpg&w=256&q=75",
     "description": "A small, round grain commonly used in gluten-free dishes.",
-    "tags": ["Vegan", "Gluten-Free"],
+    "tags": ["Vegan", "Gluten-Free", "Vegetarian"],
     "category": "Grains",
     "substitutes": [
       {
@@ -104,7 +104,7 @@
     "name": "Oats",
     "image": "https://jow.com/_next/image?url=https%3A%2F%2Fstatic.jow.fr%2Fingredients%2F5cFp2vXk5N1n7g.png.webp&w=256&q=75",
     "description": "A versatile whole grain used in baking, breakfast foods, and more.",
-    "tags": ["Vegan", "Gluten-Free"],
+    "tags": ["Vegan", "Gluten-Free", "Vegetarian"],
     "category": "Grains",
     "substitutes": [
       {
@@ -129,7 +129,7 @@
     "name": "Quinoa",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-ZBaj2OYf46nUzkWp2AuSpCa-WCuW7tYb3w&s",
     "description": "A high-protein, gluten-free grain often used as a substitute for rice.",
-    "tags": ["Vegan", "Gluten-Free"],
+    "tags": ["Vegan", "Gluten-Free", "Vegetarian"],
     "category": "Grains",
     "substitutes": [
       {
@@ -179,7 +179,7 @@
     "name": "Eggs",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVolgqhQi2yMHACJoBrRX1SXT1DgbdM1Mz2g&s",
     "description": "A versatile ingredient in cooking, essential for binding and rising.",
-    "tags": ["Vegetarian", "High-Protein"],
+    "tags": ["Vegetarian", "High-Protein", "Vegetarian"],
     "category": "Dairy",
     "substitutes": [
       {
@@ -274,7 +274,7 @@
     "name": "Whole Milk",
     "image": "https://ipcdn.freshop.com/resize?url=https://images.freshop.com/00070253651007/a455d0df8da806a119e0de3244c11a9b_large.png&width=256&type=jpeg&quality=90",
     "description": "Full-fat milk, often used in baking and cooking.",
-    "tags": ["Vegetarian"],
+    "tags": ["Vegetarian", "High-Protein"],
     "category": "Dairy",
     "substitutes": [
       {
@@ -299,7 +299,7 @@
     "name": "Yogurt",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeYnX6bA14Wz09iz32ZktIdBEqpVC9yFzatQ&s",
     "description": "A fermented dairy product used in cooking or eaten on its own.",
-    "tags": ["Vegetarian"],
+    "tags": ["Vegetarian", "High-Protein"],
     "category": "Dairy",
     "substitutes": [
       {
@@ -324,7 +324,7 @@
     "name": "Broccoli",
     "image": "https://ip.prod.freshop.retail.ncrcloud.com/resize?url=https://images.freshop.ncrcloud.com/3000230/28b4a678e83ec05450cd559941930c53_large.png&width=256&type=webp&quality=80",
     "description": "A nutritious vegetable often used in cooking and salads.",
-    "tags": ["Vegan", "Dairy-Free"],
+    "tags": ["Vegan", "Dairy-Free", "Vegetarian"],
     "category": "Produce",
     "substitutes": [
       {
@@ -349,7 +349,7 @@
     "name": "Brussels Sprouts",
     "image": "https://ip.prod.freshop.retail.ncrcloud.com/resize?url=https://images.freshop.ncrcloud.com/2310624/ca50d761fbf2e618ae4d43cf64d13c73_large.png&width=256&type=webp&quality=80",
     "description": "Small, cabbage-like vegetables often roasted or used in stir-fries.",
-    "tags": ["Vegan", "Dairy-Free"],
+    "tags": ["Vegan", "Dairy-Free", "Vegetarian"],
     "category": "Produce",
     "substitutes": [
       {
@@ -374,7 +374,7 @@
     "name": "Cabbage",
     "image": "https://jow.fr/_next/image?url=https%3A%2F%2Fstatic.jow.fr%2Fingredients%2Fhp2oZogYp9ta7Q.png.webp&w=256&q=75",
     "description": "A leafy vegetable often used in slaws and stir-fries.",
-    "tags": ["Vegan", "Dairy-Free"],
+    "tags": ["Vegan", "Dairy-Free", "Vegetarian"],
     "category": "Produce",
     "substitutes": [
       {
@@ -399,7 +399,7 @@
     "name": "Cauliflower",
     "image": "https://ipcdn.freshop.com/resize?url=https://images.freshop.com/78522/0b4f73a07c6757d9f00a8f798e87a242_large.png&width=256&type=webp&quality=80",
     "description": "A versatile vegetable used in a variety of dishes, often as a substitute for grains.",
-    "tags": ["Vegan", "Dairy-Free"],
+    "tags": ["Vegan", "Dairy-Free", "Vegetarian"],
     "category": "Produce",
     "substitutes": [
       {
@@ -424,7 +424,7 @@
     "name": "Carrots",
     "image": "https://images.stockcake.com/public/1/a/c/1acfc84c-5a50-4c2e-986b-1a09ad53715b_medium/fresh-carrot-bunch-stockcake.jpg",
     "description": "A crunchy root vegetable used in salads, stir-fries, and many dishes.",
-    "tags": ["Vegan", "Dairy-Free"],
+    "tags": ["Vegan", "Dairy-Free", "Vegetarian"],
     "category": "Produce",
     "substitutes": [
       {
@@ -449,7 +449,7 @@
     "name": "Shallots",
     "image": "https://jow.com/_next/image?url=https%3A%2F%2Fstatic.jow.fr%2Fingredients%2FtxHTcHrfHiLusA.jpg.webp&w=256&q=75",
     "description": "A milder, sweeter type of onion used in many dishes.",
-    "tags": ["Vegan", "Dairy-Free"],
+    "tags": ["Vegan", "Dairy-Free", "Vegetarian"],
     "category": "Produce",
     "substitutes": [
       {
@@ -474,7 +474,7 @@
     "name": "Bok Choy",
     "image": "https://dtgxwmigmg3gc.cloudfront.net/imagery/assets/derivations/icon/256/256/true/eyJpZCI6Ijk5YWQ5OTBmMjU2ZjIyZTU2MmMzYzJkNGU0NThhMTc2Iiwic3RvcmFnZSI6InB1YmxpY19zdG9yZSJ9?signature=41c537db321743fa0a2310709b3516f3a02c079e932de062b23584c9f4ce29bb",
     "description": "A leafy green vegetable often used in Asian dishes.",
-    "tags": ["Vegan", "Dairy-Free"],
+    "tags": ["Vegan", "Dairy-Free", "Vegetarian"],
     "category": "Produce",
     "substitutes": [
       {
@@ -499,7 +499,7 @@
     "name": "Kale",
     "image": "https://images.stockcake.com/public/8/8/e/88e8033d-b525-4eb5-ab15-25c0178ed22b_medium/fresh-kale-bunch-stockcake.jpg",
     "description": "A dark, leafy green with a slightly bitter taste, often used in salads and soups.",
-    "tags": ["Vegan", "Dairy-Free"],
+    "tags": ["Vegan", "Dairy-Free", "Vegetarian"],
     "category": "Produce",
     "substitutes": [
       {
@@ -524,7 +524,7 @@
     "name": "Butter",
     "image": "https://d28ku8nzmkcjr6.cloudfront.net/cache/81/61/8161d8f82f4df5bcdb1244468d558a49.webp",
     "description": "A dairy product made from churning cream, used in cooking and baking.",
-    "tags": ["Gluten-Free", "Low-Carb"],
+    "tags": ["Gluten-Free", "Low-Carb", "Vegetarian"],
     "category": "Dairy",
     "substitutes": [
       {
