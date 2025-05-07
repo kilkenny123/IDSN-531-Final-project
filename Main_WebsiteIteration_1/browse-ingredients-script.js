@@ -79,10 +79,12 @@ $(document).ready(function () {
 
         // Add the view button
         var button = $(
-          '<button class="view-btn">View Ingredient</button>'
+          '<button class="view-btn">View Substitutions</button>'
         ).attr(
           "onclick",
-          `window.location.href='calculator.html?ingredientId=${ingredient.id}'`
+          `window.location.href='calculator.html?ingredientId=${
+            ingredient.id
+          }&search=${ingredient.name.toLowerCase()}'`
         );
 
         // Append all elements to the tile
